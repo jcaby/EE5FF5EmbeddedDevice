@@ -117,7 +117,7 @@ static void sensor_sim(esp_mqtt_client_handle_t client){
         set_time();
         for (int i = 0; i <= 15; i++) {
 
-            char topic[14] = "EE5FF5/temp";
+            char topic[14] = "EE5FF5/test";
 
             //Initialize the values
             sprintf(sensor_id_string, "%d", i);
