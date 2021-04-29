@@ -7,7 +7,7 @@
    software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
    CONDITIONS OF ANY KIND, either express or implied.
 */
-#include "sntp.h"
+#include "mysntp.h"
 
 #include <stdio.h>
 #include <stdint.h>
