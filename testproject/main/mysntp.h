@@ -6,6 +6,6 @@
 #define SNTP_H
 
 #include "esp_sntp.h"
-static void initialize_sntp(void);
-static void set_time(void);
+void initialize_sntp(void);
+void set_time(void);
 #endif //UNTITLED_SNTP_H

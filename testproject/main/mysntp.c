@@ -8,7 +8,7 @@
 static const char *TAG = "SNTP";
 
 
-static void set_time() {
+ void set_time() {
     time_t now;
     struct tm timeinfo;
     time(&now);
@@ -24,7 +24,7 @@ static void set_time() {
 }
 
 
-static void initialize_sntp(void) {
+ void initialize_sntp(void) {
     sntp_setoperatingmode(SNTP_OPMODE_POLL);
     sntp_setservername(0, "pool.ntp.org");
     sntp_init();

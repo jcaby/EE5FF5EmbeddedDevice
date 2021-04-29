@@ -106,7 +106,7 @@ static void sensor_sim(esp_mqtt_client_handle_t client) {
     char session_id_string[14];
     int session_id = 1;
 
-    for (int measure = 0; measure <= 5; measure++) {
+    for (int measure = 0; measure <= 3; measure++) {
         set_time();
         for (int i = 0; i <= 15; i++) {
 
