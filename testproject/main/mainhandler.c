@@ -33,6 +33,9 @@
 
 #include <wifi_provisioning/scheme_softap.h>
 
+#include "driver/gpio.h"
+#include "driver/can.h"
+
 
 static const char *TAG = "app";
 
@@ -41,16 +44,15 @@ const int WIFI_CONNECTED_EVENT = BIT0;
 static EventGroupHandle_t wifi_event_group;
 
 /* Event handler for catching system events */
-static void event_handler(void* arg, esp_event_base_t event_base,
-                          int32_t event_id, void* event_data)
-{
+static void event_handler(void *arg, esp_event_base_t event_base,
+                          int32_t event_id, void *event_data) {
     if (event_base == WIFI_PROV_EVENT) {
         switch (event_id) {
             case WIFI_PROV_START:
                 ESP_LOGI(TAG, "Provisioning started");
                 break;
             case WIFI_PROV_CRED_RECV: {
-                wifi_sta_config_t *wifi_sta_cfg = (wifi_sta_config_t *)event_data;
+                wifi_sta_config_t *wifi_sta_cfg = (wifi_sta_config_t *) event_data;
                 ESP_LOGI(TAG, "Received Wi-Fi credentials"
                               "\n\tSSID     : %s\n\tPassword : %s",
                          (const char *) wifi_sta_cfg->ssid,
@@ -58,11 +60,12 @@ static void event_handler(void* arg, esp_event_base_t event_base,
                 break;
             }
             case WIFI_PROV_CRED_FAIL: {
-                wifi_prov_sta_fail_reason_t *reason = (wifi_prov_sta_fail_reason_t *)event_data;
+                wifi_prov_sta_fail_reason_t *reason = (wifi_prov_sta_fail_reason_t *) event_data;
                 ESP_LOGE(TAG, "Provisioning failed!\n\tReason : %s"
                               "\n\tPlease reset to factory and retry provisioning",
                          (*reason == WIFI_PROV_STA_AUTH_ERROR) ?
                          "Wi-Fi station authentication failed" : "Wi-Fi access-point not found");
+                esp_wifi_restore();
                 break;
             }
             case WIFI_PROV_CRED_SUCCESS:
@@ -78,7 +81,7 @@ static void event_handler(void* arg, esp_event_base_t event_base,
     } else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
         esp_wifi_connect();
     } else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
-        ip_event_got_ip_t* event = (ip_event_got_ip_t*) event_data;
+        ip_event_got_ip_t *event = (ip_event_got_ip_t *) event_data;
         ESP_LOGI(TAG, "Connected with IP Address:" IPSTR, IP2STR(&event->ip_info.ip));
         /* Signal main application to continue execution */
         xEventGroupSetBits(wifi_event_group, WIFI_CONNECTED_EVENT);
@@ -88,15 +91,13 @@ static void event_handler(void* arg, esp_event_base_t event_base,
     }
 }
 
-static void wifi_init_sta(void)
-{
+static void wifi_init_sta(void) {
     /* Start Wi-Fi in station mode */
     ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
     ESP_ERROR_CHECK(esp_wifi_start());
 }
 
-static void get_device_service_name(char *service_name, size_t max)
-{
+static void get_device_service_name(char *service_name, size_t max) {
     uint8_t eth_mac[6];
     const char *ssid_prefix = "PROV_";
     esp_wifi_get_mac(WIFI_IF_STA, eth_mac);
@@ -104,7 +105,7 @@ static void get_device_service_name(char *service_name, size_t max)
              ssid_prefix, eth_mac[3], eth_mac[4], eth_mac[5]);
 }
 
-static void sensor_sim(esp_mqtt_client_handle_t client){
+static void sensor_sim(esp_mqtt_client_handle_t client) {
     int msg_id;
 
     char sensor_id_string[14];
@@ -113,11 +114,11 @@ static void sensor_sim(esp_mqtt_client_handle_t client){
     char session_id_string[14];
     int session_id = 1;
 
-    for (int measure = 0; measure<=5;measure++) {
+    for (int measure = 0; measure <= 5; measure++) {
         set_time();
         for (int i = 0; i <= 15; i++) {
 
-            char topic[14] = "EE5FF5/test";
+            char topic[14] = "EE5FF5/temp";
 
             //Initialize the values
             sprintf(sensor_id_string, "%d", i);
@@ -155,12 +156,11 @@ static void mqtt_app_start(void) {
 
     esp_mqtt_client_handle_t client = esp_mqtt_client_init(&mqtt_cfg); //config
     esp_mqtt_client_start(client);
-    sensor_sim(client);
+    //sensor_sim(client);
 
 }
 
-void app_main(void)
-{
+void app_main(void) {
     /* Initialize NVS partition */
     esp_err_t ret = nvs_flash_init();
     if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
@@ -235,7 +235,7 @@ void app_main(void)
          *          using X25519 key exchange and proof of possession (pop) and AES-CTR
          *          for encryption/decryption of messages.
          */
-        wifi_prov_security_t security = WIFI_PROV_SECURITY_0;
+        wifi_prov_security_t security = WIFI_PROV_SECURITY_1;
 
         /* Do we want a proof-of-possession (ignored if Security 0 is selected):
          *      - this should be a string with length > 0
@@ -256,7 +256,7 @@ void app_main(void)
          * The endpoint name can be anything of your choice.
          * This call must be made before starting the provisioning.
          */
-       // wifi_prov_mgr_endpoint_create("custom-data");
+        // wifi_prov_mgr_endpoint_create("custom-data");
         /* Start provisioning service */
         ESP_ERROR_CHECK(wifi_prov_mgr_start_provisioning(security, pop, service_name, service_key));
 
@@ -290,7 +290,7 @@ void app_main(void)
 
 }
 
-static void set_time(){
+static void set_time() {
     time_t now;
     struct tm timeinfo;
     time(&now);
@@ -306,15 +306,14 @@ static void set_time(){
 }
 
 
-static void initialize_sntp(void)
-{
+static void initialize_sntp(void) {
     sntp_setoperatingmode(SNTP_OPMODE_POLL);
     sntp_setservername(0, "pool.ntp.org");
     sntp_init();
 
     // wait for time to be set
     time_t now = 0;
-    struct tm timeinfo = { 0 };
+    struct tm timeinfo = {0};
     int retry = 0;
     const int retry_count = 10;
     while (sntp_get_sync_status() == SNTP_SYNC_STATUS_RESET && ++retry < retry_count) {
