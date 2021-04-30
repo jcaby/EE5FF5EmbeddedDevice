@@ -25,8 +25,7 @@
 
 #include <wifi_provisioning/scheme_softap.h>
 
-#include "driver/gpio.h"
-#include "driver/can.h"
+
 
 
 static const char *TAG = "MAINHANDLER";
@@ -103,8 +102,7 @@ static void sensor_sim(esp_mqtt_client_handle_t client) {
     char sensor_id_string[14];
     char value_string[14];
     char time_string[64];
-    char session_id_string[14];
-    int session_id = 1;
+
 
     for (int measure = 0; measure <= 3; measure++) {
         set_time();
@@ -116,7 +114,6 @@ static void sensor_sim(esp_mqtt_client_handle_t client) {
             sprintf(sensor_id_string, "%d", i);
             sprintf(value_string, "%d", rand() % 800);
             sprintf(time_string, "%u", (unsigned) time(NULL));
-            sprintf(session_id_string, "%d", session_id);
 
             char data[512]; //JSON String
             //Concat the different components of the JSON string
@@ -126,8 +123,6 @@ static void sensor_sim(esp_mqtt_client_handle_t client) {
             strcat(data, value_string);
             strcat(data, ",\"time\":");
             strcat(data, time_string);
-            strcat(data, ",\"session_id\":");
-            strcat(data, session_id_string);
             strcat(data, "}");
 
             //Publish the mqtt instance

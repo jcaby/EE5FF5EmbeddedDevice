@@ -1,29 +1,9 @@
 "/Users/jeremy/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=CrossCompiler.cmake -G "CodeBlocks - Unix Makefiles" /Users/jeremy/CLionProjects/twai_self_test
--- Found Git: /usr/bin/git (found version "2.21.1 (Apple Git-122.3)") 
 -- Unexpected file in components directory: /Users/jeremy/esp/esp-idf/components/.DS_Store
--- IDF_TARGET not set, using default target: esp32
--- The C compiler identification is GNU 8.4.0
--- The CXX compiler identification is GNU 8.4.0
--- The ASM compiler identification is GNU
--- Found assembler: /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc
--- Check for working C compiler: /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc
--- Check for working C compiler: /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc - works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
--- Check for working CXX compiler: /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-g++
--- Check for working CXX compiler: /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-g++ - works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Detecting CXX compile features
--- Detecting CXX compile features - done
 -- Building ESP-IDF components for target esp32
 -- Checking Python dependencies...
 Python requirements from /Users/jeremy/esp/esp-idf/requirements.txt are satisfied.
 -- Project sdkconfig file /Users/jeremy/CLionProjects/twai_self_test/sdkconfig
--- Found PythonInterp: /usr/bin/python (found version "2.7.16") 
--- Found Perl: /usr/bin/perl (found version "5.18.4") 
 perl: warning: Setting locale failed.
 perl: warning: Please check that your locale settings:
 	LC_ALL = "",
@@ -49,7 +29,7 @@ CMake Warning (dev) at /Users/jeremy/esp/esp-idf/components/mbedtls/CMakeLists.t
   has a relative path.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
--- App "twai_self_test_example" version: f1349a2-dirty
+-- App "twai_self_test_example" version: 67cc543-dirty
 -- Adding linker script /Users/jeremy/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
 -- Adding linker script /Users/jeremy/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
 -- Adding linker script /Users/jeremy/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
