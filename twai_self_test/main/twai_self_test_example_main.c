@@ -27,6 +27,11 @@
 #include "esp_log.h"
 #include "driver/twai.h"
 
+#include <inttypes.h>
+#include <math.h>
+#include <stdio.h>
+#include <time.h>
+
 /* --------------------- Definitions and static variables ------------------ */
 
 //Example Configurations
@@ -104,14 +109,11 @@ static void twai_control_task(void *arg)
         //Trigger TX and RX tasks to start transmitting/receiving
         xSemaphoreGive(rx_sem);
         xSemaphoreGive(tx_sem);
-    ESP_LOGI(EXAMPLE_TAG,"sem count tx: %d", uxSemaphoreGetCount(tx_sem));
 
-    ESP_LOGI(EXAMPLE_TAG,"sem count rx: %d", uxSemaphoreGetCount(rx_sem));
-    xSemaphoreTake(ctrl_sem, portMAX_DELAY);    //Wait for TX and RX tasks to finish iteration
+        xSemaphoreTake(ctrl_sem, portMAX_DELAY);    //Wait for TX and RX tasks to finish iteration
 
         ESP_ERROR_CHECK(twai_stop());               //Stop the TWAI Driver
         ESP_LOGI(EXAMPLE_TAG, "Driver stopped");
-
     xSemaphoreGive(done_sem);
     vTaskDelete(NULL);
 }
