@@ -69,6 +69,7 @@ static void twai_transmit_task(void *arg)
             tx_msg.data[3]  = (value ) & 0xFF;
             //ESP_LOGI(EXAMPLE_TAG, "init value =  %d ", value);
             ESP_ERROR_CHECK(twai_transmit(&tx_msg, portMAX_DELAY));
+            ESP_LOGI(EXAMPLE_TAG,"MSG sent");
             vTaskDelay(pdMS_TO_TICKS(10));
         }
 
@@ -86,7 +87,6 @@ static void twai_receive_task(void *arg)
             ESP_ERROR_CHECK(twai_receive(&rx_message, portMAX_DELAY));
             ESP_LOGI(EXAMPLE_TAG, "Msg received - Data = %d %d %d %d ", rx_message.data[0], rx_message.data[1], rx_message.data[2], rx_message.data[3]);
             ESP_LOGI(EXAMPLE_TAG, "Value =  %d ", rx_message.data[2]*256 + rx_message.data[3]);
-
         }
         //Indicate to control task all messages received for this iteration
         xSemaphoreGive(ctrl_sem);
@@ -104,7 +104,10 @@ static void twai_control_task(void *arg)
         //Trigger TX and RX tasks to start transmitting/receiving
         xSemaphoreGive(rx_sem);
         xSemaphoreGive(tx_sem);
-        xSemaphoreTake(ctrl_sem, portMAX_DELAY);    //Wait for TX and RX tasks to finish iteration
+    ESP_LOGI(EXAMPLE_TAG,"sem count tx: %d", uxSemaphoreGetCount(tx_sem));
+
+    ESP_LOGI(EXAMPLE_TAG,"sem count rx: %d", uxSemaphoreGetCount(rx_sem));
+    xSemaphoreTake(ctrl_sem, portMAX_DELAY);    //Wait for TX and RX tasks to finish iteration
 
         ESP_ERROR_CHECK(twai_stop());               //Stop the TWAI Driver
         ESP_LOGI(EXAMPLE_TAG, "Driver stopped");

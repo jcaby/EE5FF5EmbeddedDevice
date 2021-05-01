@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/Users/jeremy/CLionProjects/tcp/build/CMakeFiles/bootloader
+/Users/jeremy/CLionProjects/tcp/build/CMakeFiles/bootloader.rule
+/Users/jeremy/CLionProjects/tcp/build/CMakeFiles/bootloader-complete.rule
+/Users/jeremy/CLionProjects/tcp/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/Users/jeremy/CLionProjects/tcp/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/Users/jeremy/CLionProjects/tcp/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/Users/jeremy/CLionProjects/tcp/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+/Users/jeremy/CLionProjects/tcp/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/Users/jeremy/CLionProjects/tcp/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/Users/jeremy/CLionProjects/tcp/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
