@@ -66,7 +66,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/jeremy/esp/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader
+CMAKE_BINARY_DIR = /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader
 
 # Include any dependencies generated for this target.
 include esp-idf/log/CMakeFiles/__idf_log.dir/depend.make
@@ -78,43 +78,43 @@ include esp-idf/log/CMakeFiles/__idf_log.dir/progress.make
 include esp-idf/log/CMakeFiles/__idf_log.dir/flags.make
 
 esp-idf/log/CMakeFiles/__idf_log.dir/log.c.obj: esp-idf/log/CMakeFiles/__idf_log.dir/flags.make
-esp-idf/log/CMakeFiles/__idf_log.dir/log.c.obj: ../../../../../../components/log/log.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/log/CMakeFiles/__idf_log.dir/log.c.obj"
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/log && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/__idf_log.dir/log.c.obj   -c /Users/jeremy/esp/esp-idf/components/log/log.c
+esp-idf/log/CMakeFiles/__idf_log.dir/log.c.obj: /Users/jeremy/esp/esp-idf/components/log/log.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/log/CMakeFiles/__idf_log.dir/log.c.obj"
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/log && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/__idf_log.dir/log.c.obj   -c /Users/jeremy/esp/esp-idf/components/log/log.c
 
 esp-idf/log/CMakeFiles/__idf_log.dir/log.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_log.dir/log.c.i"
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/log && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jeremy/esp/esp-idf/components/log/log.c > CMakeFiles/__idf_log.dir/log.c.i
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/log && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jeremy/esp/esp-idf/components/log/log.c > CMakeFiles/__idf_log.dir/log.c.i
 
 esp-idf/log/CMakeFiles/__idf_log.dir/log.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_log.dir/log.c.s"
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/log && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jeremy/esp/esp-idf/components/log/log.c -o CMakeFiles/__idf_log.dir/log.c.s
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/log && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jeremy/esp/esp-idf/components/log/log.c -o CMakeFiles/__idf_log.dir/log.c.s
 
 esp-idf/log/CMakeFiles/__idf_log.dir/log_buffers.c.obj: esp-idf/log/CMakeFiles/__idf_log.dir/flags.make
-esp-idf/log/CMakeFiles/__idf_log.dir/log_buffers.c.obj: ../../../../../../components/log/log_buffers.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/log/CMakeFiles/__idf_log.dir/log_buffers.c.obj"
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/log && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/__idf_log.dir/log_buffers.c.obj   -c /Users/jeremy/esp/esp-idf/components/log/log_buffers.c
+esp-idf/log/CMakeFiles/__idf_log.dir/log_buffers.c.obj: /Users/jeremy/esp/esp-idf/components/log/log_buffers.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/log/CMakeFiles/__idf_log.dir/log_buffers.c.obj"
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/log && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/__idf_log.dir/log_buffers.c.obj   -c /Users/jeremy/esp/esp-idf/components/log/log_buffers.c
 
 esp-idf/log/CMakeFiles/__idf_log.dir/log_buffers.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_log.dir/log_buffers.c.i"
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/log && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jeremy/esp/esp-idf/components/log/log_buffers.c > CMakeFiles/__idf_log.dir/log_buffers.c.i
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/log && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jeremy/esp/esp-idf/components/log/log_buffers.c > CMakeFiles/__idf_log.dir/log_buffers.c.i
 
 esp-idf/log/CMakeFiles/__idf_log.dir/log_buffers.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_log.dir/log_buffers.c.s"
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/log && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jeremy/esp/esp-idf/components/log/log_buffers.c -o CMakeFiles/__idf_log.dir/log_buffers.c.s
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/log && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jeremy/esp/esp-idf/components/log/log_buffers.c -o CMakeFiles/__idf_log.dir/log_buffers.c.s
 
 esp-idf/log/CMakeFiles/__idf_log.dir/log_noos.c.obj: esp-idf/log/CMakeFiles/__idf_log.dir/flags.make
-esp-idf/log/CMakeFiles/__idf_log.dir/log_noos.c.obj: ../../../../../../components/log/log_noos.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/log/CMakeFiles/__idf_log.dir/log_noos.c.obj"
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/log && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/__idf_log.dir/log_noos.c.obj   -c /Users/jeremy/esp/esp-idf/components/log/log_noos.c
+esp-idf/log/CMakeFiles/__idf_log.dir/log_noos.c.obj: /Users/jeremy/esp/esp-idf/components/log/log_noos.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/log/CMakeFiles/__idf_log.dir/log_noos.c.obj"
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/log && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/__idf_log.dir/log_noos.c.obj   -c /Users/jeremy/esp/esp-idf/components/log/log_noos.c
 
 esp-idf/log/CMakeFiles/__idf_log.dir/log_noos.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_log.dir/log_noos.c.i"
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/log && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jeremy/esp/esp-idf/components/log/log_noos.c > CMakeFiles/__idf_log.dir/log_noos.c.i
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/log && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jeremy/esp/esp-idf/components/log/log_noos.c > CMakeFiles/__idf_log.dir/log_noos.c.i
 
 esp-idf/log/CMakeFiles/__idf_log.dir/log_noos.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_log.dir/log_noos.c.s"
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/log && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jeremy/esp/esp-idf/components/log/log_noos.c -o CMakeFiles/__idf_log.dir/log_noos.c.s
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/log && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jeremy/esp/esp-idf/components/log/log_noos.c -o CMakeFiles/__idf_log.dir/log_noos.c.s
 
 # Object files for target __idf_log
 __idf_log_OBJECTS = \
@@ -130,9 +130,9 @@ esp-idf/log/liblog.a: esp-idf/log/CMakeFiles/__idf_log.dir/log_buffers.c.obj
 esp-idf/log/liblog.a: esp-idf/log/CMakeFiles/__idf_log.dir/log_noos.c.obj
 esp-idf/log/liblog.a: esp-idf/log/CMakeFiles/__idf_log.dir/build.make
 esp-idf/log/liblog.a: esp-idf/log/CMakeFiles/__idf_log.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library liblog.a"
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/log && $(CMAKE_COMMAND) -P CMakeFiles/__idf_log.dir/cmake_clean_target.cmake
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/log && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_log.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library liblog.a"
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/log && $(CMAKE_COMMAND) -P CMakeFiles/__idf_log.dir/cmake_clean_target.cmake
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/log && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_log.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 esp-idf/log/CMakeFiles/__idf_log.dir/build: esp-idf/log/liblog.a
@@ -140,10 +140,10 @@ esp-idf/log/CMakeFiles/__idf_log.dir/build: esp-idf/log/liblog.a
 .PHONY : esp-idf/log/CMakeFiles/__idf_log.dir/build
 
 esp-idf/log/CMakeFiles/__idf_log.dir/clean:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/log && $(CMAKE_COMMAND) -P CMakeFiles/__idf_log.dir/cmake_clean.cmake
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/log && $(CMAKE_COMMAND) -P CMakeFiles/__idf_log.dir/cmake_clean.cmake
 .PHONY : esp-idf/log/CMakeFiles/__idf_log.dir/clean
 
 esp-idf/log/CMakeFiles/__idf_log.dir/depend:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jeremy/esp/esp-idf/components/bootloader/subproject /Users/jeremy/esp/esp-idf/components/log /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/log /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/log/CMakeFiles/__idf_log.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jeremy/esp/esp-idf/components/bootloader/subproject /Users/jeremy/esp/esp-idf/components/log /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/log /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/log/CMakeFiles/__idf_log.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/log/CMakeFiles/__idf_log.dir/depend
 

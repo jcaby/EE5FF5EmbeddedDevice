@@ -176,7 +176,7 @@ void app_main(void) {
          *      - this should be a string with length > 0
          *      - NULL if not used
          */
-        const char *pop = "test";
+        const char *pop = "FF5";
 
         /* What is the service key (could be NULL)
          * This translates to :
@@ -186,26 +186,10 @@ void app_main(void) {
         const char *service_key = NULL;
 
 
-        /* An optional endpoint that applications can create if they expect to
-         * get some additional custom data during provisioning workflow.
-         * The endpoint name can be anything of your choice.
-         * This call must be made before starting the provisioning.
-         */
-        // wifi_prov_mgr_endpoint_create("custom-data");
         /* Start provisioning service */
         ESP_ERROR_CHECK(wifi_prov_mgr_start_provisioning(security, pop, service_name, service_key));
 
-        /* The handler for the optional endpoint created above.
-         * This call must be made after starting the provisioning, and only if the endpoint
-         * has already been created above.
-         */
-        //wifi_prov_mgr_endpoint_register("custom-data", custom_prov_data_handler, NULL);
 
-        /* Uncomment the following to wait for the provisioning to finish and then release
-         * the resources of the manager. Since in this case de-initialization is triggered
-         * by the default event loop handler, we don't need to call the following */
-        // wifi_prov_mgr_wait();
-        // wifi_prov_mgr_deinit();
     } else {
         ESP_LOGI(TAG, "Already provisioned, starting Wi-Fi STA");
 
@@ -220,8 +204,12 @@ void app_main(void) {
     /* Wait for Wi-Fi connection */
     xEventGroupWaitBits(wifi_event_group, WIFI_CONNECTED_EVENT, false, true, portMAX_DELAY);
 
+    /* Connect to SNTP server */
     initialize_sntp();
+
+    /* Configure ESP32 as MQTT client */
     mqtt_app_start();
+
 
 }
 

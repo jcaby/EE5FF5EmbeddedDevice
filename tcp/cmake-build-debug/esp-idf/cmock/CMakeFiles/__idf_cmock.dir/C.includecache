@@ -6,9 +6,25 @@
 
 #IncludeRegexTransform: 
 
-../../../../../components/esp_common/include/esp_compiler.h
+/Users/jeremy/esp/esp-idf/components/cmock/CMock/src/cmock.c
+cmock.h
+/Users/jeremy/esp/esp-idf/components/cmock/CMock/src/cmock.h
 
-../../../../../components/esp_common/include/esp_err.h
+/Users/jeremy/esp/esp-idf/components/cmock/CMock/src/cmock.h
+cmock_internals.h
+/Users/jeremy/esp/esp-idf/components/cmock/CMock/src/cmock_internals.h
+stddef.h
+-
+
+/Users/jeremy/esp/esp-idf/components/cmock/CMock/src/cmock_internals.h
+unity.h
+/Users/jeremy/esp/esp-idf/components/cmock/CMock/src/unity.h
+stdlib.h
+-
+
+/Users/jeremy/esp/esp-idf/components/esp_common/include/esp_compiler.h
+
+/Users/jeremy/esp/esp-idf/components/esp_common/include/esp_err.h
 stdint.h
 -
 stdio.h
@@ -16,45 +32,45 @@ stdio.h
 assert.h
 -
 
-../../../../../components/newlib/platform_include/assert.h
+/Users/jeremy/esp/esp-idf/components/newlib/platform_include/assert.h
 sdkconfig.h
 -
 stdlib.h
 -
 esp_compiler.h
-../../../../../components/newlib/platform_include/esp_compiler.h
+/Users/jeremy/esp/esp-idf/components/newlib/platform_include/esp_compiler.h
 
-../../../../../components/newlib/platform_include/time.h
+/Users/jeremy/esp/esp-idf/components/newlib/platform_include/time.h
 
-../../../../../components/unity/include/unity_config.h
+/Users/jeremy/esp/esp-idf/components/unity/include/unity_config.h
 esp_err.h
 -
 stddef.h
 -
 sdkconfig.h
-../../../../../components/unity/include/sdkconfig.h
+/Users/jeremy/esp/esp-idf/components/unity/include/sdkconfig.h
 unity_test_runner.h
-../../../../../components/unity/include/unity_test_runner.h
+/Users/jeremy/esp/esp-idf/components/unity/include/unity_test_runner.h
 unity_fixture_extras.h
-../../../../../components/unity/include/unity_fixture_extras.h
+/Users/jeremy/esp/esp-idf/components/unity/include/unity_fixture_extras.h
 
-../../../../../components/unity/include/unity_fixture_extras.h
+/Users/jeremy/esp/esp-idf/components/unity/include/unity_fixture_extras.h
 
-../../../../../components/unity/include/unity_test_runner.h
+/Users/jeremy/esp/esp-idf/components/unity/include/unity_test_runner.h
 stdint.h
 -
 stdbool.h
 -
 sdkconfig.h
-../../../../../components/unity/include/sdkconfig.h
+/Users/jeremy/esp/esp-idf/components/unity/include/sdkconfig.h
 
-../../../../../components/unity/unity/src/unity.h
+/Users/jeremy/esp/esp-idf/components/unity/unity/src/unity.h
 unity_internals.h
-../../../../../components/unity/unity/src/unity_internals.h
+/Users/jeremy/esp/esp-idf/components/unity/unity/src/unity_internals.h
 
-../../../../../components/unity/unity/src/unity_internals.h
+/Users/jeremy/esp/esp-idf/components/unity/unity/src/unity_internals.h
 unity_config.h
-../../../../../components/unity/unity/src/unity_config.h
+/Users/jeremy/esp/esp-idf/components/unity/unity/src/unity_config.h
 setjmp.h
 -
 math.h
@@ -70,22 +86,6 @@ time.h
 stdio.h
 -
 stdio.h
--
-
-/Users/jeremy/esp/esp-idf/components/cmock/CMock/src/cmock.c
-cmock.h
-/Users/jeremy/esp/esp-idf/components/cmock/CMock/src/cmock.h
-
-/Users/jeremy/esp/esp-idf/components/cmock/CMock/src/cmock.h
-cmock_internals.h
-/Users/jeremy/esp/esp-idf/components/cmock/CMock/src/cmock_internals.h
-stddef.h
--
-
-/Users/jeremy/esp/esp-idf/components/cmock/CMock/src/cmock_internals.h
-unity.h
-/Users/jeremy/esp/esp-idf/components/cmock/CMock/src/unity.h
-stdlib.h
 -
 
 config/sdkconfig.h

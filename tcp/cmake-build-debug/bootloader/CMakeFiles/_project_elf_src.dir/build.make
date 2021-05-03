@@ -66,7 +66,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/jeremy/esp/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader
+CMAKE_BINARY_DIR = /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader
 
 # Utility rule file for _project_elf_src.
 
@@ -77,8 +77,8 @@ CMakeFiles/_project_elf_src: project_elf_src_esp32.c
 
 
 project_elf_src_esp32.c:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating project_elf_src_esp32.c"
-	"/Users/jeremy/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E touch /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/project_elf_src_esp32.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating project_elf_src_esp32.c"
+	"/Users/jeremy/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E touch /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/project_elf_src_esp32.c
 
 _project_elf_src: CMakeFiles/_project_elf_src
 _project_elf_src: project_elf_src_esp32.c
@@ -96,6 +96,6 @@ CMakeFiles/_project_elf_src.dir/clean:
 .PHONY : CMakeFiles/_project_elf_src.dir/clean
 
 CMakeFiles/_project_elf_src.dir/depend:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jeremy/esp/esp-idf/components/bootloader/subproject /Users/jeremy/esp/esp-idf/components/bootloader/subproject /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/CMakeFiles/_project_elf_src.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jeremy/esp/esp-idf/components/bootloader/subproject /Users/jeremy/esp/esp-idf/components/bootloader/subproject /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/CMakeFiles/_project_elf_src.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/_project_elf_src.dir/depend
 

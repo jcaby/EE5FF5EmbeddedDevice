@@ -218,6 +218,87 @@ app_main.c.s:
 	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.s
 .PHONY : app_main.c.s
 
+linkedlist.obj: linkedlist.c.obj
+
+.PHONY : linkedlist.obj
+
+# target to build an object file
+linkedlist.c.obj:
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/linkedlist.c.obj
+.PHONY : linkedlist.c.obj
+
+linkedlist.i: linkedlist.c.i
+
+.PHONY : linkedlist.i
+
+# target to preprocess a source file
+linkedlist.c.i:
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/linkedlist.c.i
+.PHONY : linkedlist.c.i
+
+linkedlist.s: linkedlist.c.s
+
+.PHONY : linkedlist.s
+
+# target to generate assembly for a file
+linkedlist.c.s:
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/linkedlist.c.s
+.PHONY : linkedlist.c.s
+
+mymqtt.obj: mymqtt.c.obj
+
+.PHONY : mymqtt.obj
+
+# target to build an object file
+mymqtt.c.obj:
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/mymqtt.c.obj
+.PHONY : mymqtt.c.obj
+
+mymqtt.i: mymqtt.c.i
+
+.PHONY : mymqtt.i
+
+# target to preprocess a source file
+mymqtt.c.i:
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/mymqtt.c.i
+.PHONY : mymqtt.c.i
+
+mymqtt.s: mymqtt.c.s
+
+.PHONY : mymqtt.s
+
+# target to generate assembly for a file
+mymqtt.c.s:
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/mymqtt.c.s
+.PHONY : mymqtt.c.s
+
+mysntp.obj: mysntp.c.obj
+
+.PHONY : mysntp.obj
+
+# target to build an object file
+mysntp.c.obj:
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/mysntp.c.obj
+.PHONY : mysntp.c.obj
+
+mysntp.i: mysntp.c.i
+
+.PHONY : mysntp.i
+
+# target to preprocess a source file
+mysntp.c.i:
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/mysntp.c.i
+.PHONY : mysntp.c.i
+
+mysntp.s: mysntp.c.s
+
+.PHONY : mysntp.s
+
+# target to generate assembly for a file
+mysntp.c.s:
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/mysntp.c.s
+.PHONY : mysntp.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -234,6 +315,15 @@ help:
 	@echo "... app_main.obj"
 	@echo "... app_main.i"
 	@echo "... app_main.s"
+	@echo "... linkedlist.obj"
+	@echo "... linkedlist.i"
+	@echo "... linkedlist.s"
+	@echo "... mymqtt.obj"
+	@echo "... mymqtt.i"
+	@echo "... mymqtt.s"
+	@echo "... mysntp.obj"
+	@echo "... mysntp.i"
+	@echo "... mysntp.s"
 .PHONY : help
 
 

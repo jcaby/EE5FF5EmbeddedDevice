@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-../../../../../components/esp_common/include/esp_compiler.h
+/Users/jeremy/esp/esp-idf/components/esp_common/include/esp_compiler.h
 
-../../../../../components/newlib/platform_include/assert.h
+/Users/jeremy/esp/esp-idf/components/newlib/platform_include/assert.h
 sdkconfig.h
 -
 stdlib.h
 -
 esp_compiler.h
-../../../../../components/newlib/platform_include/esp_compiler.h
+/Users/jeremy/esp/esp-idf/components/newlib/platform_include/esp_compiler.h
 
 /Users/jeremy/esp/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c
 stdlib.h

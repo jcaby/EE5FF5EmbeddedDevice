@@ -7,6 +7,7 @@
 #include "mysntp.h"
 
 static const char *TAG = "MQTT";
+esp_mqtt_client_handle_t mqtt_client;
 
 
  void mqtt_app_start(void) {
@@ -14,13 +15,13 @@ static const char *TAG = "MQTT";
             .uri = CONFIG_BROKER_URL,
     };
 
-    esp_mqtt_client_handle_t client = esp_mqtt_client_init(&mqtt_cfg); //config
-    esp_mqtt_client_start(client);
-    sensor_sim(client);
+    mqtt_client = esp_mqtt_client_init(&mqtt_cfg); //config
+    esp_mqtt_client_start(mqtt_client);
+    //sensor_sim(client);
 
 }
 
- void sensor_sim(esp_mqtt_client_handle_t client) {
+ void sensor_sim(esp_mqtt_client_handle_t mqtt_client) {
     int msg_id;
 
     char sensor_id_string[14];
@@ -50,7 +51,7 @@ static const char *TAG = "MQTT";
             strcat(data, "}");
 
             //Publish the mqtt instance
-            msg_id = esp_mqtt_client_publish(client, topic, data, 0, 2, 0);
+            msg_id = esp_mqtt_client_publish(mqtt_client, topic, data, 0, 2, 0);
             ESP_LOGI(TAG, "sent publish successful, msg_id=%d", msg_id);
             printf("TOPIC=%s\r\n", topic);
             printf("DATA=%s\r\n", data);

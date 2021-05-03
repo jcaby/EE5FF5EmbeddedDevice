@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/project_elf_src_esp32.c" "/Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/CMakeFiles/bootloader.elf.dir/project_elf_src_esp32.c.obj"
+  "/Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/project_elf_src_esp32.c" "/Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/CMakeFiles/bootloader.elf.dir/project_elf_src_esp32.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -36,16 +36,16 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/hal/CMakeFiles/__idf_hal.dir/DependInfo.cmake"
-  "/Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/soc/CMakeFiles/__idf_soc.dir/DependInfo.cmake"
-  "/Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/DependInfo.cmake"
-  "/Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/DependInfo.cmake"
-  "/Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/DependInfo.cmake"
-  "/Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/DependInfo.cmake"
-  "/Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/DependInfo.cmake"
-  "/Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/DependInfo.cmake"
-  "/Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/log/CMakeFiles/__idf_log.dir/DependInfo.cmake"
-  "/Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/main/CMakeFiles/__idf_main.dir/DependInfo.cmake"
+  "/Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/hal/CMakeFiles/__idf_hal.dir/DependInfo.cmake"
+  "/Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/soc/CMakeFiles/__idf_soc.dir/DependInfo.cmake"
+  "/Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/DependInfo.cmake"
+  "/Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/DependInfo.cmake"
+  "/Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/DependInfo.cmake"
+  "/Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/DependInfo.cmake"
+  "/Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/DependInfo.cmake"
+  "/Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/DependInfo.cmake"
+  "/Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/log/CMakeFiles/__idf_log.dir/DependInfo.cmake"
+  "/Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/main/CMakeFiles/__idf_main.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

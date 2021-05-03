@@ -5,6 +5,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/jeremy/CLionProjects/tcp/main/app_main.c" "/Users/jeremy/CLionProjects/tcp/cmake-build-debug/esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj"
+  "/Users/jeremy/CLionProjects/tcp/main/linkedlist.c" "/Users/jeremy/CLionProjects/tcp/cmake-build-debug/esp-idf/main/CMakeFiles/__idf_main.dir/linkedlist.c.obj"
+  "/Users/jeremy/CLionProjects/tcp/main/mymqtt.c" "/Users/jeremy/CLionProjects/tcp/cmake-build-debug/esp-idf/main/CMakeFiles/__idf_main.dir/mymqtt.c.obj"
+  "/Users/jeremy/CLionProjects/tcp/main/mysntp.c" "/Users/jeremy/CLionProjects/tcp/cmake-build-debug/esp-idf/main/CMakeFiles/__idf_main.dir/mysntp.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

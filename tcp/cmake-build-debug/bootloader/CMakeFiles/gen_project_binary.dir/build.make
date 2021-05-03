@@ -66,7 +66,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/jeremy/esp/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader
+CMAKE_BINARY_DIR = /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader
 
 # Utility rule file for gen_project_binary.
 
@@ -77,10 +77,10 @@ CMakeFiles/gen_project_binary: .bin_timestamp
 
 
 .bin_timestamp: bootloader.elf
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating binary image from built executable"
-	/Users/jeremy/.espressif/python_env/idf4.4_py2.7_env/bin/python /Users/jeremy/esp/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32 elf2image --flash_mode dio --flash_freq 40m --flash_size 2MB -o /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/bootloader.bin /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/bootloader.elf
-	"/Users/jeremy/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo "Generated /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/bootloader.bin"
-	"/Users/jeremy/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E md5sum /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/bootloader.bin > /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/.bin_timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating binary image from built executable"
+	/Users/jeremy/.espressif/python_env/idf4.4_py2.7_env/bin/python /Users/jeremy/esp/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32 elf2image --flash_mode dio --flash_freq 40m --flash_size 2MB -o /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/bootloader.bin /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/bootloader.elf
+	"/Users/jeremy/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo "Generated /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/bootloader.bin"
+	"/Users/jeremy/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E md5sum /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/bootloader.bin > /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/.bin_timestamp
 
 gen_project_binary: CMakeFiles/gen_project_binary
 gen_project_binary: .bin_timestamp
@@ -98,6 +98,6 @@ CMakeFiles/gen_project_binary.dir/clean:
 .PHONY : CMakeFiles/gen_project_binary.dir/clean
 
 CMakeFiles/gen_project_binary.dir/depend:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jeremy/esp/esp-idf/components/bootloader/subproject /Users/jeremy/esp/esp-idf/components/bootloader/subproject /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/CMakeFiles/gen_project_binary.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jeremy/esp/esp-idf/components/bootloader/subproject /Users/jeremy/esp/esp-idf/components/bootloader/subproject /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/CMakeFiles/gen_project_binary.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/gen_project_binary.dir/depend
 

@@ -66,7 +66,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/jeremy/esp/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader
+CMAKE_BINARY_DIR = /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader
 
 # Utility rule file for uf2.
 
@@ -74,7 +74,7 @@ CMAKE_BINARY_DIR = /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-b
 include CMakeFiles/uf2.dir/progress.make
 
 CMakeFiles/uf2: bootloader
-	/Users/jeremy/.espressif/python_env/idf4.4_py2.7_env/bin/python /Users/jeremy/esp/esp-idf/tools/mkuf2.py write -o /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/uf2.bin --json /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/flasher_args.json --chip-id 0x1c5f21b0
+	/Users/jeremy/.espressif/python_env/idf4.4_py2.7_env/bin/python /Users/jeremy/esp/esp-idf/tools/mkuf2.py write -o /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/uf2.bin --json /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/flasher_args.json --chip-id 0x1c5f21b0
 
 uf2: CMakeFiles/uf2
 uf2: CMakeFiles/uf2.dir/build.make
@@ -91,6 +91,6 @@ CMakeFiles/uf2.dir/clean:
 .PHONY : CMakeFiles/uf2.dir/clean
 
 CMakeFiles/uf2.dir/depend:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jeremy/esp/esp-idf/components/bootloader/subproject /Users/jeremy/esp/esp-idf/components/bootloader/subproject /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/CMakeFiles/uf2.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jeremy/esp/esp-idf/components/bootloader/subproject /Users/jeremy/esp/esp-idf/components/bootloader/subproject /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/CMakeFiles/uf2.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uf2.dir/depend
 

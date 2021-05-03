@@ -66,7 +66,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/jeremy/esp/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader
+CMAKE_BINARY_DIR = /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader
 
 # Utility rule file for menuconfig.
 
@@ -74,11 +74,11 @@ CMAKE_BINARY_DIR = /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-b
 include CMakeFiles/menuconfig.dir/progress.make
 
 CMakeFiles/menuconfig:
-	/Users/jeremy/.espressif/python_env/idf4.4_py2.7_env/bin/python /Users/jeremy/esp/esp-idf/tools/kconfig_new/prepare_kconfig_files.py --env-file /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/config.env
-	/Users/jeremy/.espressif/python_env/idf4.4_py2.7_env/bin/python /Users/jeremy/esp/esp-idf/tools/kconfig_new/confgen.py --kconfig /Users/jeremy/esp/esp-idf/Kconfig --sdkconfig-rename /Users/jeremy/esp/esp-idf/sdkconfig.rename --config /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/sdkconfig --env-file /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/config.env --env IDF_TARGET=esp32 --env IDF_ENV_FPGA= --dont-write-deprecated --output config /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/sdkconfig
+	/Users/jeremy/.espressif/python_env/idf4.4_py2.7_env/bin/python /Users/jeremy/esp/esp-idf/tools/kconfig_new/prepare_kconfig_files.py --env-file /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/config.env
+	/Users/jeremy/.espressif/python_env/idf4.4_py2.7_env/bin/python /Users/jeremy/esp/esp-idf/tools/kconfig_new/confgen.py --kconfig /Users/jeremy/esp/esp-idf/Kconfig --sdkconfig-rename /Users/jeremy/esp/esp-idf/sdkconfig.rename --config /Users/jeremy/CLionProjects/tcp/sdkconfig --env-file /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/config.env --env IDF_TARGET=esp32 --env IDF_ENV_FPGA= --dont-write-deprecated --output config /Users/jeremy/CLionProjects/tcp/sdkconfig
 	/Users/jeremy/.espressif/python_env/idf4.4_py2.7_env/bin/python /Users/jeremy/esp/esp-idf/tools/check_term.py
-	"/Users/jeremy/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E env COMPONENT_KCONFIGS_SOURCE_FILE=/Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/kconfigs.in COMPONENT_KCONFIGS_PROJBUILD_SOURCE_FILE=/Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/kconfigs_projbuild.in IDF_CMAKE=y KCONFIG_CONFIG=/Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/sdkconfig IDF_TARGET=esp32 IDF_ENV_FPGA= /Users/jeremy/.espressif/python_env/idf4.4_py2.7_env/bin/python -m menuconfig /Users/jeremy/esp/esp-idf/Kconfig
-	/Users/jeremy/.espressif/python_env/idf4.4_py2.7_env/bin/python /Users/jeremy/esp/esp-idf/tools/kconfig_new/confgen.py --kconfig /Users/jeremy/esp/esp-idf/Kconfig --sdkconfig-rename /Users/jeremy/esp/esp-idf/sdkconfig.rename --config /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/sdkconfig --env-file /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/config.env --env IDF_TARGET=esp32 --env IDF_ENV_FPGA= --output config /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/sdkconfig
+	"/Users/jeremy/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E env COMPONENT_KCONFIGS_SOURCE_FILE=/Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/kconfigs.in COMPONENT_KCONFIGS_PROJBUILD_SOURCE_FILE=/Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/kconfigs_projbuild.in IDF_CMAKE=y KCONFIG_CONFIG=/Users/jeremy/CLionProjects/tcp/sdkconfig IDF_TARGET=esp32 IDF_ENV_FPGA= /Users/jeremy/.espressif/python_env/idf4.4_py2.7_env/bin/python -m menuconfig /Users/jeremy/esp/esp-idf/Kconfig
+	/Users/jeremy/.espressif/python_env/idf4.4_py2.7_env/bin/python /Users/jeremy/esp/esp-idf/tools/kconfig_new/confgen.py --kconfig /Users/jeremy/esp/esp-idf/Kconfig --sdkconfig-rename /Users/jeremy/esp/esp-idf/sdkconfig.rename --config /Users/jeremy/CLionProjects/tcp/sdkconfig --env-file /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/config.env --env IDF_TARGET=esp32 --env IDF_ENV_FPGA= --output config /Users/jeremy/CLionProjects/tcp/sdkconfig
 
 menuconfig: CMakeFiles/menuconfig
 menuconfig: CMakeFiles/menuconfig.dir/build.make
@@ -95,6 +95,6 @@ CMakeFiles/menuconfig.dir/clean:
 .PHONY : CMakeFiles/menuconfig.dir/clean
 
 CMakeFiles/menuconfig.dir/depend:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jeremy/esp/esp-idf/components/bootloader/subproject /Users/jeremy/esp/esp-idf/components/bootloader/subproject /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/CMakeFiles/menuconfig.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jeremy/esp/esp-idf/components/bootloader/subproject /Users/jeremy/esp/esp-idf/components/bootloader/subproject /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/CMakeFiles/menuconfig.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/menuconfig.dir/depend
 

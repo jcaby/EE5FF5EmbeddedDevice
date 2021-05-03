@@ -90,17 +90,62 @@ esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_main.dir/app_main.c.s"
 	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/esp-idf/main && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jeremy/CLionProjects/tcp/main/app_main.c -o CMakeFiles/__idf_main.dir/app_main.c.s
 
+esp-idf/main/CMakeFiles/__idf_main.dir/mysntp.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
+esp-idf/main/CMakeFiles/__idf_main.dir/mysntp.c.obj: ../main/mysntp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jeremy/CLionProjects/tcp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/mysntp.c.obj"
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/esp-idf/main && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/__idf_main.dir/mysntp.c.obj   -c /Users/jeremy/CLionProjects/tcp/main/mysntp.c
+
+esp-idf/main/CMakeFiles/__idf_main.dir/mysntp.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_main.dir/mysntp.c.i"
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/esp-idf/main && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jeremy/CLionProjects/tcp/main/mysntp.c > CMakeFiles/__idf_main.dir/mysntp.c.i
+
+esp-idf/main/CMakeFiles/__idf_main.dir/mysntp.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_main.dir/mysntp.c.s"
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/esp-idf/main && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jeremy/CLionProjects/tcp/main/mysntp.c -o CMakeFiles/__idf_main.dir/mysntp.c.s
+
+esp-idf/main/CMakeFiles/__idf_main.dir/mymqtt.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
+esp-idf/main/CMakeFiles/__idf_main.dir/mymqtt.c.obj: ../main/mymqtt.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jeremy/CLionProjects/tcp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/mymqtt.c.obj"
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/esp-idf/main && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/__idf_main.dir/mymqtt.c.obj   -c /Users/jeremy/CLionProjects/tcp/main/mymqtt.c
+
+esp-idf/main/CMakeFiles/__idf_main.dir/mymqtt.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_main.dir/mymqtt.c.i"
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/esp-idf/main && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jeremy/CLionProjects/tcp/main/mymqtt.c > CMakeFiles/__idf_main.dir/mymqtt.c.i
+
+esp-idf/main/CMakeFiles/__idf_main.dir/mymqtt.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_main.dir/mymqtt.c.s"
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/esp-idf/main && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jeremy/CLionProjects/tcp/main/mymqtt.c -o CMakeFiles/__idf_main.dir/mymqtt.c.s
+
+esp-idf/main/CMakeFiles/__idf_main.dir/linkedlist.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
+esp-idf/main/CMakeFiles/__idf_main.dir/linkedlist.c.obj: ../main/linkedlist.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jeremy/CLionProjects/tcp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/linkedlist.c.obj"
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/esp-idf/main && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/__idf_main.dir/linkedlist.c.obj   -c /Users/jeremy/CLionProjects/tcp/main/linkedlist.c
+
+esp-idf/main/CMakeFiles/__idf_main.dir/linkedlist.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_main.dir/linkedlist.c.i"
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/esp-idf/main && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jeremy/CLionProjects/tcp/main/linkedlist.c > CMakeFiles/__idf_main.dir/linkedlist.c.i
+
+esp-idf/main/CMakeFiles/__idf_main.dir/linkedlist.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_main.dir/linkedlist.c.s"
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/esp-idf/main && /Users/jeremy/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jeremy/CLionProjects/tcp/main/linkedlist.c -o CMakeFiles/__idf_main.dir/linkedlist.c.s
+
 # Object files for target __idf_main
 __idf_main_OBJECTS = \
-"CMakeFiles/__idf_main.dir/app_main.c.obj"
+"CMakeFiles/__idf_main.dir/app_main.c.obj" \
+"CMakeFiles/__idf_main.dir/mysntp.c.obj" \
+"CMakeFiles/__idf_main.dir/mymqtt.c.obj" \
+"CMakeFiles/__idf_main.dir/linkedlist.c.obj"
 
 # External object files for target __idf_main
 __idf_main_EXTERNAL_OBJECTS =
 
 esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj
+esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/mysntp.c.obj
+esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/mymqtt.c.obj
+esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/linkedlist.c.obj
 esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/build.make
 esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jeremy/CLionProjects/tcp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libmain.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jeremy/CLionProjects/tcp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C static library libmain.a"
 	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/esp-idf/main && $(CMAKE_COMMAND) -P CMakeFiles/__idf_main.dir/cmake_clean_target.cmake
 	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/esp-idf/main && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_main.dir/link.txt --verbose=$(VERBOSE)
 

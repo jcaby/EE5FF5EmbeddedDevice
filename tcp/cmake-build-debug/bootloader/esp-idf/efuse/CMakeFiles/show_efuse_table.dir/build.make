@@ -66,7 +66,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/jeremy/esp/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader
+CMAKE_BINARY_DIR = /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader
 
 # Utility rule file for show_efuse_table.
 
@@ -74,7 +74,7 @@ CMAKE_BINARY_DIR = /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-b
 include esp-idf/efuse/CMakeFiles/show_efuse_table.dir/progress.make
 
 esp-idf/efuse/CMakeFiles/show_efuse_table:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/efuse && /Users/jeremy/.espressif/python_env/idf4.4_py2.7_env/bin/python /Users/jeremy/esp/esp-idf/components/efuse/efuse_table_gen.py /Users/jeremy/esp/esp-idf/components/efuse/esp32/esp_efuse_table.csv -t esp32 --max_blk_len 192 --info
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/efuse && /Users/jeremy/.espressif/python_env/idf4.4_py2.7_env/bin/python /Users/jeremy/esp/esp-idf/components/efuse/efuse_table_gen.py /Users/jeremy/esp/esp-idf/components/efuse/esp32/esp_efuse_table.csv -t esp32 --max_blk_len 192 --info
 
 show_efuse_table: esp-idf/efuse/CMakeFiles/show_efuse_table
 show_efuse_table: esp-idf/efuse/CMakeFiles/show_efuse_table.dir/build.make
@@ -87,10 +87,10 @@ esp-idf/efuse/CMakeFiles/show_efuse_table.dir/build: show_efuse_table
 .PHONY : esp-idf/efuse/CMakeFiles/show_efuse_table.dir/build
 
 esp-idf/efuse/CMakeFiles/show_efuse_table.dir/clean:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/efuse && $(CMAKE_COMMAND) -P CMakeFiles/show_efuse_table.dir/cmake_clean.cmake
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/efuse && $(CMAKE_COMMAND) -P CMakeFiles/show_efuse_table.dir/cmake_clean.cmake
 .PHONY : esp-idf/efuse/CMakeFiles/show_efuse_table.dir/clean
 
 esp-idf/efuse/CMakeFiles/show_efuse_table.dir/depend:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jeremy/esp/esp-idf/components/bootloader/subproject /Users/jeremy/esp/esp-idf/components/efuse /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/efuse /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/efuse/CMakeFiles/show_efuse_table.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jeremy/esp/esp-idf/components/bootloader/subproject /Users/jeremy/esp/esp-idf/components/efuse /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/efuse /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/efuse/CMakeFiles/show_efuse_table.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/efuse/CMakeFiles/show_efuse_table.dir/depend
 

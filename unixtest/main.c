@@ -42,15 +42,17 @@ int main (){
     int value = 0;
     twai_message_t tx_msg;
     for (int i = 0; i < 16; i++) {
-        value = rand() % 800;
+        value = rand()%800;
         printf("Value: %d in binary: %llu \n", value, convert(value));
-        tx_msg.data[0] = (((value >> 8) & 0xFF) << 6 & 0xFF) + i;
-        printf("data[0] %llu \n",convert(tx_msg.data[0]));
-        printf("data[0] id: %d in binary: %llu \n",tx_msg.data[0], convert(tx_msg.data[0]));
-        printf("data[0] multiplier: %d in binary: %llu \n",(tx_msg.data[0] >> 6 & 0xFF), convert((tx_msg.data[0] >> 6 & 0xFF)));
-        tx_msg.data[1] = (value) & 0xFF;
-        printf("data[1] measurement: %d in binary: %llu \n",tx_msg.data[1], convert(tx_msg.data[1]));
-        printf("Calculated value : %d \n",(tx_msg.data[0] >> 6 & 0xFF)*256+tx_msg.data[1]);
+        tx_msg.data[0] = i;
+        printf("data[0] sensor_id: %d in binary: %llu \n",tx_msg.data[0], convert(tx_msg.data[0]));
+        tx_msg.data[1] = value>>4 & 0xFF;
+        printf("data[1] : %d in binary: %llu \n",tx_msg.data[1], convert(tx_msg.data[1]));
+        printf("data[1] shifted: %d in binary: %llu \n",(tx_msg.data[1]<<4 & 0xFFF), convert((tx_msg.data[1]<<4 & 0xFFF)));
+        tx_msg.data[2] = value<<4 & 0xFF ;
+        printf("data[2] : %d in binary: %llu \n",tx_msg.data[2], convert(tx_msg.data[2]));
+        printf("data[1] shifted: %d in binary: %llu \n",(tx_msg.data[2]>>4 & 0xFF), convert((tx_msg.data[2]>>4 & 0xFF)));
+        printf("calculated result: %d in binary: %llu \n",((tx_msg.data[1]<<4 & 0xFFF)+(tx_msg.data[2]>>4 & 0xFF)),convert(((tx_msg.data[1]<<4 & 0xFFF)+(tx_msg.data[2]>>4 & 0xFF))));
         printf("\n");
 
 

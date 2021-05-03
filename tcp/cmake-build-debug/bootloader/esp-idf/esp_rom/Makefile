@@ -71,7 +71,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/jeremy/esp/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader
+CMAKE_BINARY_DIR = /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,14 +100,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/CMakeFiles /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/esp_rom/CMakeFiles/progress.marks
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_rom/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/CMakeFiles 0
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/CMakeFiles /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/esp_rom/CMakeFiles/progress.marks
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_rom/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_rom/clean
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_rom/clean
 .PHONY : clean
 
 # The main clean target
@@ -117,22 +117,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_rom/preinstall
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_rom/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_rom/preinstall
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_rom/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/rule:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/rule
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/rule
 .PHONY : esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/rule
 
 # Convenience name for target.
@@ -142,7 +142,7 @@ __idf_esp_rom: esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/rule
 
 # fast build rule for target.
 __idf_esp_rom/fast:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build
 .PHONY : __idf_esp_rom/fast
 
 patches/esp_rom_crc.obj: patches/esp_rom_crc.c.obj
@@ -151,7 +151,7 @@ patches/esp_rom_crc.obj: patches/esp_rom_crc.c.obj
 
 # target to build an object file
 patches/esp_rom_crc.c.obj:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.obj
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.obj
 .PHONY : patches/esp_rom_crc.c.obj
 
 patches/esp_rom_crc.i: patches/esp_rom_crc.c.i
@@ -160,7 +160,7 @@ patches/esp_rom_crc.i: patches/esp_rom_crc.c.i
 
 # target to preprocess a source file
 patches/esp_rom_crc.c.i:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.i
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.i
 .PHONY : patches/esp_rom_crc.c.i
 
 patches/esp_rom_crc.s: patches/esp_rom_crc.c.s
@@ -169,7 +169,7 @@ patches/esp_rom_crc.s: patches/esp_rom_crc.c.s
 
 # target to generate assembly for a file
 patches/esp_rom_crc.c.s:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.s
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.s
 .PHONY : patches/esp_rom_crc.c.s
 
 patches/esp_rom_sys.obj: patches/esp_rom_sys.c.obj
@@ -178,7 +178,7 @@ patches/esp_rom_sys.obj: patches/esp_rom_sys.c.obj
 
 # target to build an object file
 patches/esp_rom_sys.c.obj:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.obj
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.obj
 .PHONY : patches/esp_rom_sys.c.obj
 
 patches/esp_rom_sys.i: patches/esp_rom_sys.c.i
@@ -187,7 +187,7 @@ patches/esp_rom_sys.i: patches/esp_rom_sys.c.i
 
 # target to preprocess a source file
 patches/esp_rom_sys.c.i:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.i
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.i
 .PHONY : patches/esp_rom_sys.c.i
 
 patches/esp_rom_sys.s: patches/esp_rom_sys.c.s
@@ -196,7 +196,7 @@ patches/esp_rom_sys.s: patches/esp_rom_sys.c.s
 
 # target to generate assembly for a file
 patches/esp_rom_sys.c.s:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.s
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.s
 .PHONY : patches/esp_rom_sys.c.s
 
 patches/esp_rom_uart.obj: patches/esp_rom_uart.c.obj
@@ -205,7 +205,7 @@ patches/esp_rom_uart.obj: patches/esp_rom_uart.c.obj
 
 # target to build an object file
 patches/esp_rom_uart.c.obj:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_uart.c.obj
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_uart.c.obj
 .PHONY : patches/esp_rom_uart.c.obj
 
 patches/esp_rom_uart.i: patches/esp_rom_uart.c.i
@@ -214,7 +214,7 @@ patches/esp_rom_uart.i: patches/esp_rom_uart.c.i
 
 # target to preprocess a source file
 patches/esp_rom_uart.c.i:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_uart.c.i
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_uart.c.i
 .PHONY : patches/esp_rom_uart.c.i
 
 patches/esp_rom_uart.s: patches/esp_rom_uart.c.s
@@ -223,7 +223,7 @@ patches/esp_rom_uart.s: patches/esp_rom_uart.c.s
 
 # target to generate assembly for a file
 patches/esp_rom_uart.c.s:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_uart.c.s
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_uart.c.s
 .PHONY : patches/esp_rom_uart.c.s
 
 # Help Target
@@ -255,6 +255,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

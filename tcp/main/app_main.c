@@ -1,111 +1,128 @@
 #include <fnmatch.h>
-/* MQTT (over TCP) Example
-
-   This example code is in the Public Domain (or CC0 licensed, at your option.)
-
-   Unless required by applicable law or agreed to in writing, this
-   software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-   CONDITIONS OF ANY KIND, either express or implied.
-*/
+#include "mysntp.h"
+#include "mymqtt.h"
 
 #include <stdio.h>
 #include <stdint.h>
-#include <stddef.h>
 #include <string.h>
-#include "esp_wifi.h"
-#include "esp_system.h"
-#include "nvs_flash.h"
-#include "esp_event.h"
+#include <time.h>
+#include <esp_vfs_fat.h>
+
+#include <freertos/FreeRTOS.h>
+#include <freertos/task.h>
+#include <freertos/event_groups.h>
+
+#include <esp_log.h>
+#include <esp_wifi.h>
+#include <esp_event.h>
 #include "esp_netif.h"
-#include "protocol_examples_common.h"
-#include "esp_sntp.h"
+#include <nvs_flash.h>
 
+#include "esp_system.h"
+#include "esp_spi_flash.h"
 
+#include <protocol_examples_common.h>
+
+#include <stdlib.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/semphr.h"
-#include "freertos/queue.h"
+#include "esp_err.h"
+#include "driver/twai.h"
+#include "linkedlist.h"
 
-#include "lwip/sockets.h"
-#include "lwip/dns.h"
-#include "lwip/netdb.h"
-
-#include "esp_log.h"
-#include "mqtt_client.h"
+#include <inttypes.h>
 
 static const char *TAG = "MQTT_EXAMPLE";
 
-static void initialize_sntp(void);
-static void set_time(void);
+/* --------------------- Definitions and static variables ------------------ */
 
-static void log_error_if_nonzero(const char * message, int error_code)
+//Example Configurations
+#define NO_OF_MSGS              15
+#define NO_OF_ITERS             3
+#define TX_GPIO_NUM             25
+#define RX_GPIO_NUM             26
+#define TX_TASK_PRIO            8       //Sending task priority
+#define RX_TASK_PRIO            9       //Receiving task priority
+#define CTRL_TSK_PRIO           10      //Control task priority
+#define MSG_ID                  0x555   //11 bit standard format ID
+#define EXAMPLE_TAG             "TWAI Self Test"
+
+static const twai_timing_config_t t_config = TWAI_TIMING_CONFIG_25KBITS();
+//Filter all other IDs except MSG_ID
+static const twai_filter_config_t f_config = {.acceptance_code = (MSG_ID << 21),
+        .acceptance_mask = ~(TWAI_STD_ID_MASK << 21),
+        .single_filter = true};
+//Set to NO_ACK mode due to self testing with single module
+static const twai_general_config_t g_config = TWAI_GENERAL_CONFIG_DEFAULT(TX_GPIO_NUM, RX_GPIO_NUM, TWAI_MODE_NO_ACK);
+
+static SemaphoreHandle_t tx_sem;
+static SemaphoreHandle_t rx_sem;
+static SemaphoreHandle_t ctrl_sem;
+static SemaphoreHandle_t done_sem;
+//static SemaphoreHandle_t mqtt_sem;
+
+
+static void twai_transmit_task(void *arg)
 {
-    if (error_code != 0) {
-        ESP_LOGE(TAG, "Last error %s: 0x%x", message, error_code);
+    twai_message_t tx_msg = {.data_length_code = 3, .identifier = MSG_ID, .self = 1};
+    int value = 1;
+    for (int iter = 0; iter < NO_OF_ITERS; iter++) {
+        xSemaphoreTake(tx_sem, portMAX_DELAY);
+        for (int i = 0; i < NO_OF_MSGS; i++) {
+            value = rand() % 799;
+            printf("sent value: %d \n", value);
+            //Transmit messages using self reception request
+            tx_msg.data[0] = i;
+            tx_msg.data[1] = value >> 4 & 0xFF;
+            tx_msg.data[2] = value << 4 & 0xFF;
+            ESP_ERROR_CHECK(twai_transmit(&tx_msg, portMAX_DELAY));
+            ESP_LOGI(EXAMPLE_TAG, "MSG sent");
+            vTaskDelay(pdMS_TO_TICKS(10));
+        }
     }
+    vTaskDelete(NULL);
 }
 
-char time_string[64];
+static void twai_receive_task(void *arg)
+{
+    twai_message_t rx_message;
+    head = NULL;
 
-_Noreturn static void mqtt_app_start(void) {
-    esp_mqtt_client_config_t mqtt_cfg = {
-            .uri = CONFIG_BROKER_URL,
-    };
+    for (int iter = 0; iter < NO_OF_ITERS; iter++) {
+        xSemaphoreTake(rx_sem, portMAX_DELAY);
+        for (int i = 0; i < NO_OF_MSGS; i++) {
+            //Receive message and print message data
+            ESP_ERROR_CHECK(twai_receive(&rx_message, portMAX_DELAY));
+            ESP_LOGI(EXAMPLE_TAG, "Msg received");
+            insert_at_tail(rx_message);
 
-    esp_mqtt_client_handle_t client = esp_mqtt_client_init(&mqtt_cfg); //config
-    //esp_mqtt_client_register_event(client, ESP_EVENT_ANY_ID, mqtt_event_handler, client);
-    esp_mqtt_client_start(client);
-
-    //esp_mqtt_client_handle_t client = event->client;
-    int msg_id;
-
-    char sensor_id_string[14];
-    char value_string[14];
-    //char time_string[14];
-    char session_id_string[14];
-    int session_id = 1;
-
-    /* Start main application now */
-
-    while (1) {
-        //ESP_LOGI(TAG, "Hello World!");
-
-        for (int measure = 0; measure<=5;measure++) {
-            //set_time();
-
-            for (int id = 0; id <= 15; id++) {
-
-                char topic[14] = "EE5FF5/temp";
-
-                sprintf(sensor_id_string, "%d", id);
-                sprintf(value_string, "%d", rand() % 800);
-                sprintf(time_string,"%u",(unsigned)time(NULL));
-                sprintf(session_id_string, "%d", session_id);
-
-                char data[1024]; //JSON String
-
-                //Concat the different components of the string
-                strcpy(data, "{\"sensor_id\":");
-                strcat(data, sensor_id_string);
-                strcat(data, ",\"value\":");
-                strcat(data, value_string);
-                strcat(data, ",\"time\":");
-                strcat(data, time_string);
-                strcat(data, ",\"session_id\":");
-                strcat(data, session_id_string);
-                strcat(data, "}");
-
-                //Publish the mqtt instance
-                msg_id = esp_mqtt_client_publish(client, topic, data, 0, 2, 0);
-                ESP_LOGI(TAG, "sent publish successful, msg_id=%d", msg_id);
-                printf("TOPIC=%s\r\n", topic);
-                printf("DATA=%s\r\n", data);
-                //vTaskDelay(1000 / portTICK_PERIOD_MS);
-            }
-            vTaskDelay(10000 / portTICK_PERIOD_MS);
         }
-
+        //Indicate to control task all messages received for this iteration
+        xSemaphoreGive(ctrl_sem);
     }
+    vTaskDelete(NULL);
+}
+
+static void twai_control_task(void *arg)
+{
+    xSemaphoreTake(ctrl_sem, portMAX_DELAY);
+    for (int iter = 0; iter < NO_OF_ITERS; iter++) {
+        //Start TWAI Driver for this iteration
+        ESP_ERROR_CHECK(twai_start());
+        ESP_LOGI(EXAMPLE_TAG, "Driver started");
+
+        //Trigger TX and RX tasks to start transmitting/receiving
+        xSemaphoreGive(rx_sem);
+        xSemaphoreGive(tx_sem);
+        xSemaphoreTake(ctrl_sem, portMAX_DELAY);    //Wait for TX and RX tasks to finish iteration
+
+        ESP_ERROR_CHECK(twai_stop());               //Stop the TWAI Driver
+        ESP_LOGI(EXAMPLE_TAG, "Driver stopped");
+        vTaskDelay(pdMS_TO_TICKS(10000));             //Delay then start next iteration
+    }
+    xSemaphoreGive(done_sem);
+    vTaskDelete(NULL);
 }
 
 void app_main(void)
@@ -132,45 +149,48 @@ void app_main(void)
      */
     ESP_ERROR_CHECK(example_connect());
 
-    //initialize_sntp();
+    initialize_sntp();
+    set_time();
+    srand((unsigned int)time(NULL));
     mqtt_app_start();
+
+    //Create tasks and synchronization primitives
+    tx_sem = xSemaphoreCreateBinary();
+    rx_sem = xSemaphoreCreateBinary();
+    ctrl_sem = xSemaphoreCreateBinary();
+    done_sem = xSemaphoreCreateBinary();
+  //  mqtt_sem = xSemaphoreCreateBinary();
+
+    xTaskCreatePinnedToCore(twai_control_task, "TWAI_ctrl", 4096, NULL, CTRL_TSK_PRIO, NULL, tskNO_AFFINITY);
+    xTaskCreatePinnedToCore(twai_receive_task, "TWAI_rx", 4096, NULL, RX_TASK_PRIO, NULL, tskNO_AFFINITY);
+    xTaskCreatePinnedToCore(twai_transmit_task, "TWAI_tx", 4096, NULL, TX_TASK_PRIO, NULL, tskNO_AFFINITY);
+    xTaskCreatePinnedToCore(publish_list, "LIST_pub", 4096, NULL, 7, NULL, tskNO_AFFINITY);
+
+    //Install TWAI driver
+    ESP_ERROR_CHECK(twai_driver_install(&g_config, &t_config, &f_config));
+    ESP_LOGI(EXAMPLE_TAG, "Driver installed");
+
+    //Start control task
+    xSemaphoreGive(ctrl_sem);
+    //Wait for all iterations and tasks to complete running
+    xSemaphoreTake(done_sem, portMAX_DELAY);
+
+    print_list();
+    //publish_list();
+    //print_list();
+
+
+
+    ESP_LOGI(EXAMPLE_TAG, "Finito señor(ita)");
+
+    //Cleanup
+    vSemaphoreDelete(tx_sem);
+    vSemaphoreDelete(rx_sem);
+    vSemaphoreDelete(ctrl_sem);
+    vQueueDelete(done_sem);
+
 }
 
-static void set_time(){
-    time_t now;
-    struct tm timeinfo;
-    time(&now);
-    localtime_r(&now, &timeinfo);
-    // Is time set? If not, tm_year will be (1970 - 1900).
-    if (timeinfo.tm_year < (2016 - 1900)) {
-        ESP_LOGI(TAG, "Time is not set yet. Connecting to WiFi and getting time over NTP.");
-        initialize_sntp();
-        // update 'now' variable with current time
-        time(&now);
-    }
 
-}
-
-
-
-static void initialize_sntp(void)
-{
-    //ESP_LOGI(TAG, "Initializing SNTP");
-    sntp_setoperatingmode(SNTP_OPMODE_POLL);
-    sntp_setservername(0, "pool.ntp.org");
-    sntp_init();
-
-    // wait for time to be set
-    time_t now = 0;
-    struct tm timeinfo = { 0 };
-    int retry = 0;
-    const int retry_count = 10;
-    while (sntp_get_sync_status() == SNTP_SYNC_STATUS_RESET && ++retry < retry_count) {
-        ESP_LOGI(TAG, "Waiting for system time to be set... (%d/%d)", retry, retry_count);
-        vTaskDelay(2000 / portTICK_PERIOD_MS);
-    }
-    time(&now);
-    localtime_r(&now, &timeinfo);
-}
 
 

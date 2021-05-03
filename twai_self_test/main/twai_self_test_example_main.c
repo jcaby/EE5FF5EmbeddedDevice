@@ -92,6 +92,7 @@ static void twai_receive_task(void *arg)
             ESP_ERROR_CHECK(twai_receive(&rx_message, portMAX_DELAY));
             ESP_LOGI(EXAMPLE_TAG, "Msg received - Data = %d %d %d %d ", rx_message.data[0], rx_message.data[1], rx_message.data[2], rx_message.data[3]);
             ESP_LOGI(EXAMPLE_TAG, "Value =  %d ", rx_message.data[2]*256 + rx_message.data[3]);
+
         }
         //Indicate to control task all messages received for this iteration
         xSemaphoreGive(ctrl_sem);

@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/Users/jeremy/esp/esp-idf")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

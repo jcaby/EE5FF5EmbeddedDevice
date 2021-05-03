@@ -71,7 +71,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/jeremy/esp/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader
+CMAKE_BINARY_DIR = /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,14 +100,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/CMakeFiles /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/hal/CMakeFiles/progress.marks
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/hal/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/CMakeFiles 0
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/CMakeFiles /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/hal/CMakeFiles/progress.marks
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/hal/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/hal/clean
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/hal/clean
 .PHONY : clean
 
 # The main clean target
@@ -117,22 +117,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/hal/preinstall
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/hal/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/hal/preinstall
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/hal/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/hal/CMakeFiles/__idf_hal.dir/rule:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/hal/CMakeFiles/__idf_hal.dir/rule
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/hal/CMakeFiles/__idf_hal.dir/rule
 .PHONY : esp-idf/hal/CMakeFiles/__idf_hal.dir/rule
 
 # Convenience name for target.
@@ -142,7 +142,7 @@ __idf_hal: esp-idf/hal/CMakeFiles/__idf_hal.dir/rule
 
 # fast build rule for target.
 __idf_hal/fast:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/hal/CMakeFiles/__idf_hal.dir/build.make esp-idf/hal/CMakeFiles/__idf_hal.dir/build
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/hal/CMakeFiles/__idf_hal.dir/build.make esp-idf/hal/CMakeFiles/__idf_hal.dir/build
 .PHONY : __idf_hal/fast
 
 mpu_hal.obj: mpu_hal.c.obj
@@ -151,7 +151,7 @@ mpu_hal.obj: mpu_hal.c.obj
 
 # target to build an object file
 mpu_hal.c.obj:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/hal/CMakeFiles/__idf_hal.dir/build.make esp-idf/hal/CMakeFiles/__idf_hal.dir/mpu_hal.c.obj
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/hal/CMakeFiles/__idf_hal.dir/build.make esp-idf/hal/CMakeFiles/__idf_hal.dir/mpu_hal.c.obj
 .PHONY : mpu_hal.c.obj
 
 mpu_hal.i: mpu_hal.c.i
@@ -160,7 +160,7 @@ mpu_hal.i: mpu_hal.c.i
 
 # target to preprocess a source file
 mpu_hal.c.i:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/hal/CMakeFiles/__idf_hal.dir/build.make esp-idf/hal/CMakeFiles/__idf_hal.dir/mpu_hal.c.i
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/hal/CMakeFiles/__idf_hal.dir/build.make esp-idf/hal/CMakeFiles/__idf_hal.dir/mpu_hal.c.i
 .PHONY : mpu_hal.c.i
 
 mpu_hal.s: mpu_hal.c.s
@@ -169,7 +169,7 @@ mpu_hal.s: mpu_hal.c.s
 
 # target to generate assembly for a file
 mpu_hal.c.s:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/hal/CMakeFiles/__idf_hal.dir/build.make esp-idf/hal/CMakeFiles/__idf_hal.dir/mpu_hal.c.s
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/hal/CMakeFiles/__idf_hal.dir/build.make esp-idf/hal/CMakeFiles/__idf_hal.dir/mpu_hal.c.s
 .PHONY : mpu_hal.c.s
 
 wdt_hal_iram.obj: wdt_hal_iram.c.obj
@@ -178,7 +178,7 @@ wdt_hal_iram.obj: wdt_hal_iram.c.obj
 
 # target to build an object file
 wdt_hal_iram.c.obj:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/hal/CMakeFiles/__idf_hal.dir/build.make esp-idf/hal/CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.obj
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/hal/CMakeFiles/__idf_hal.dir/build.make esp-idf/hal/CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.obj
 .PHONY : wdt_hal_iram.c.obj
 
 wdt_hal_iram.i: wdt_hal_iram.c.i
@@ -187,7 +187,7 @@ wdt_hal_iram.i: wdt_hal_iram.c.i
 
 # target to preprocess a source file
 wdt_hal_iram.c.i:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/hal/CMakeFiles/__idf_hal.dir/build.make esp-idf/hal/CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.i
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/hal/CMakeFiles/__idf_hal.dir/build.make esp-idf/hal/CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.i
 .PHONY : wdt_hal_iram.c.i
 
 wdt_hal_iram.s: wdt_hal_iram.c.s
@@ -196,7 +196,7 @@ wdt_hal_iram.s: wdt_hal_iram.c.s
 
 # target to generate assembly for a file
 wdt_hal_iram.c.s:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/hal/CMakeFiles/__idf_hal.dir/build.make esp-idf/hal/CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.s
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/hal/CMakeFiles/__idf_hal.dir/build.make esp-idf/hal/CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.s
 .PHONY : wdt_hal_iram.c.s
 
 # Help Target
@@ -225,6 +225,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

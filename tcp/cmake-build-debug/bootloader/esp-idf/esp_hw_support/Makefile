@@ -71,7 +71,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/jeremy/esp/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader
+CMAKE_BINARY_DIR = /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,14 +100,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/CMakeFiles /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/esp-idf/esp_hw_support/CMakeFiles/progress.marks
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_hw_support/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader/CMakeFiles 0
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/CMakeFiles /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/esp-idf/esp_hw_support/CMakeFiles/progress.marks
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_hw_support/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_hw_support/clean
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_hw_support/clean
 .PHONY : clean
 
 # The main clean target
@@ -117,22 +117,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_hw_support/preinstall
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_hw_support/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_hw_support/preinstall
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_hw_support/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/rule:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/rule
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/rule
 .PHONY : esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/rule
 
 # Convenience name for target.
@@ -142,7 +142,7 @@ __idf_esp_hw_support: esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir
 
 # fast build rule for target.
 __idf_esp_hw_support/fast:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build
 .PHONY : __idf_esp_hw_support/fast
 
 compare_set.obj: compare_set.c.obj
@@ -151,7 +151,7 @@ compare_set.obj: compare_set.c.obj
 
 # target to build an object file
 compare_set.c.obj:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/compare_set.c.obj
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/compare_set.c.obj
 .PHONY : compare_set.c.obj
 
 compare_set.i: compare_set.c.i
@@ -160,7 +160,7 @@ compare_set.i: compare_set.c.i
 
 # target to preprocess a source file
 compare_set.c.i:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/compare_set.c.i
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/compare_set.c.i
 .PHONY : compare_set.c.i
 
 compare_set.s: compare_set.c.s
@@ -169,7 +169,7 @@ compare_set.s: compare_set.c.s
 
 # target to generate assembly for a file
 compare_set.c.s:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/compare_set.c.s
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/compare_set.c.s
 .PHONY : compare_set.c.s
 
 cpu_util.obj: cpu_util.c.obj
@@ -178,7 +178,7 @@ cpu_util.obj: cpu_util.c.obj
 
 # target to build an object file
 cpu_util.c.obj:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/cpu_util.c.obj
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/cpu_util.c.obj
 .PHONY : cpu_util.c.obj
 
 cpu_util.i: cpu_util.c.i
@@ -187,7 +187,7 @@ cpu_util.i: cpu_util.c.i
 
 # target to preprocess a source file
 cpu_util.c.i:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/cpu_util.c.i
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/cpu_util.c.i
 .PHONY : cpu_util.c.i
 
 cpu_util.s: cpu_util.c.s
@@ -196,7 +196,7 @@ cpu_util.s: cpu_util.c.s
 
 # target to generate assembly for a file
 cpu_util.c.s:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/cpu_util.c.s
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/cpu_util.c.s
 .PHONY : cpu_util.c.s
 
 port/esp32/rtc_clk.obj: port/esp32/rtc_clk.c.obj
@@ -205,7 +205,7 @@ port/esp32/rtc_clk.obj: port/esp32/rtc_clk.c.obj
 
 # target to build an object file
 port/esp32/rtc_clk.c.obj:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_clk.c.obj
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_clk.c.obj
 .PHONY : port/esp32/rtc_clk.c.obj
 
 port/esp32/rtc_clk.i: port/esp32/rtc_clk.c.i
@@ -214,7 +214,7 @@ port/esp32/rtc_clk.i: port/esp32/rtc_clk.c.i
 
 # target to preprocess a source file
 port/esp32/rtc_clk.c.i:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_clk.c.i
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_clk.c.i
 .PHONY : port/esp32/rtc_clk.c.i
 
 port/esp32/rtc_clk.s: port/esp32/rtc_clk.c.s
@@ -223,7 +223,7 @@ port/esp32/rtc_clk.s: port/esp32/rtc_clk.c.s
 
 # target to generate assembly for a file
 port/esp32/rtc_clk.c.s:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_clk.c.s
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_clk.c.s
 .PHONY : port/esp32/rtc_clk.c.s
 
 port/esp32/rtc_clk_init.obj: port/esp32/rtc_clk_init.c.obj
@@ -232,7 +232,7 @@ port/esp32/rtc_clk_init.obj: port/esp32/rtc_clk_init.c.obj
 
 # target to build an object file
 port/esp32/rtc_clk_init.c.obj:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_clk_init.c.obj
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_clk_init.c.obj
 .PHONY : port/esp32/rtc_clk_init.c.obj
 
 port/esp32/rtc_clk_init.i: port/esp32/rtc_clk_init.c.i
@@ -241,7 +241,7 @@ port/esp32/rtc_clk_init.i: port/esp32/rtc_clk_init.c.i
 
 # target to preprocess a source file
 port/esp32/rtc_clk_init.c.i:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_clk_init.c.i
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_clk_init.c.i
 .PHONY : port/esp32/rtc_clk_init.c.i
 
 port/esp32/rtc_clk_init.s: port/esp32/rtc_clk_init.c.s
@@ -250,7 +250,7 @@ port/esp32/rtc_clk_init.s: port/esp32/rtc_clk_init.c.s
 
 # target to generate assembly for a file
 port/esp32/rtc_clk_init.c.s:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_clk_init.c.s
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_clk_init.c.s
 .PHONY : port/esp32/rtc_clk_init.c.s
 
 port/esp32/rtc_init.obj: port/esp32/rtc_init.c.obj
@@ -259,7 +259,7 @@ port/esp32/rtc_init.obj: port/esp32/rtc_init.c.obj
 
 # target to build an object file
 port/esp32/rtc_init.c.obj:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_init.c.obj
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_init.c.obj
 .PHONY : port/esp32/rtc_init.c.obj
 
 port/esp32/rtc_init.i: port/esp32/rtc_init.c.i
@@ -268,7 +268,7 @@ port/esp32/rtc_init.i: port/esp32/rtc_init.c.i
 
 # target to preprocess a source file
 port/esp32/rtc_init.c.i:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_init.c.i
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_init.c.i
 .PHONY : port/esp32/rtc_init.c.i
 
 port/esp32/rtc_init.s: port/esp32/rtc_init.c.s
@@ -277,7 +277,7 @@ port/esp32/rtc_init.s: port/esp32/rtc_init.c.s
 
 # target to generate assembly for a file
 port/esp32/rtc_init.c.s:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_init.c.s
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_init.c.s
 .PHONY : port/esp32/rtc_init.c.s
 
 port/esp32/rtc_pm.obj: port/esp32/rtc_pm.c.obj
@@ -286,7 +286,7 @@ port/esp32/rtc_pm.obj: port/esp32/rtc_pm.c.obj
 
 # target to build an object file
 port/esp32/rtc_pm.c.obj:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_pm.c.obj
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_pm.c.obj
 .PHONY : port/esp32/rtc_pm.c.obj
 
 port/esp32/rtc_pm.i: port/esp32/rtc_pm.c.i
@@ -295,7 +295,7 @@ port/esp32/rtc_pm.i: port/esp32/rtc_pm.c.i
 
 # target to preprocess a source file
 port/esp32/rtc_pm.c.i:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_pm.c.i
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_pm.c.i
 .PHONY : port/esp32/rtc_pm.c.i
 
 port/esp32/rtc_pm.s: port/esp32/rtc_pm.c.s
@@ -304,7 +304,7 @@ port/esp32/rtc_pm.s: port/esp32/rtc_pm.c.s
 
 # target to generate assembly for a file
 port/esp32/rtc_pm.c.s:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_pm.c.s
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_pm.c.s
 .PHONY : port/esp32/rtc_pm.c.s
 
 port/esp32/rtc_sleep.obj: port/esp32/rtc_sleep.c.obj
@@ -313,7 +313,7 @@ port/esp32/rtc_sleep.obj: port/esp32/rtc_sleep.c.obj
 
 # target to build an object file
 port/esp32/rtc_sleep.c.obj:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_sleep.c.obj
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_sleep.c.obj
 .PHONY : port/esp32/rtc_sleep.c.obj
 
 port/esp32/rtc_sleep.i: port/esp32/rtc_sleep.c.i
@@ -322,7 +322,7 @@ port/esp32/rtc_sleep.i: port/esp32/rtc_sleep.c.i
 
 # target to preprocess a source file
 port/esp32/rtc_sleep.c.i:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_sleep.c.i
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_sleep.c.i
 .PHONY : port/esp32/rtc_sleep.c.i
 
 port/esp32/rtc_sleep.s: port/esp32/rtc_sleep.c.s
@@ -331,7 +331,7 @@ port/esp32/rtc_sleep.s: port/esp32/rtc_sleep.c.s
 
 # target to generate assembly for a file
 port/esp32/rtc_sleep.c.s:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_sleep.c.s
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_sleep.c.s
 .PHONY : port/esp32/rtc_sleep.c.s
 
 port/esp32/rtc_time.obj: port/esp32/rtc_time.c.obj
@@ -340,7 +340,7 @@ port/esp32/rtc_time.obj: port/esp32/rtc_time.c.obj
 
 # target to build an object file
 port/esp32/rtc_time.c.obj:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_time.c.obj
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_time.c.obj
 .PHONY : port/esp32/rtc_time.c.obj
 
 port/esp32/rtc_time.i: port/esp32/rtc_time.c.i
@@ -349,7 +349,7 @@ port/esp32/rtc_time.i: port/esp32/rtc_time.c.i
 
 # target to preprocess a source file
 port/esp32/rtc_time.c.i:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_time.c.i
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_time.c.i
 .PHONY : port/esp32/rtc_time.c.i
 
 port/esp32/rtc_time.s: port/esp32/rtc_time.c.s
@@ -358,7 +358,7 @@ port/esp32/rtc_time.s: port/esp32/rtc_time.c.s
 
 # target to generate assembly for a file
 port/esp32/rtc_time.c.s:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_time.c.s
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_time.c.s
 .PHONY : port/esp32/rtc_time.c.s
 
 port/esp32/rtc_wdt.obj: port/esp32/rtc_wdt.c.obj
@@ -367,7 +367,7 @@ port/esp32/rtc_wdt.obj: port/esp32/rtc_wdt.c.obj
 
 # target to build an object file
 port/esp32/rtc_wdt.c.obj:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_wdt.c.obj
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_wdt.c.obj
 .PHONY : port/esp32/rtc_wdt.c.obj
 
 port/esp32/rtc_wdt.i: port/esp32/rtc_wdt.c.i
@@ -376,7 +376,7 @@ port/esp32/rtc_wdt.i: port/esp32/rtc_wdt.c.i
 
 # target to preprocess a source file
 port/esp32/rtc_wdt.c.i:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_wdt.c.i
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_wdt.c.i
 .PHONY : port/esp32/rtc_wdt.c.i
 
 port/esp32/rtc_wdt.s: port/esp32/rtc_wdt.c.s
@@ -385,7 +385,7 @@ port/esp32/rtc_wdt.s: port/esp32/rtc_wdt.c.s
 
 # target to generate assembly for a file
 port/esp32/rtc_wdt.c.s:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_wdt.c.s
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_wdt.c.s
 .PHONY : port/esp32/rtc_wdt.c.s
 
 # Help Target
@@ -435,6 +435,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/jeremy/esp/esp-idf/examples/protocols/mqtt/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/jeremy/CLionProjects/tcp/cmake-build-debug/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

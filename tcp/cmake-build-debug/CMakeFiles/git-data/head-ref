@@ -1,1 +1,12 @@
-7c1c978f1548bf6fc462569144b28478821c9bfc
+38dd5a3f8dbe39b4f8a996f981bd1287b42ccc59 aec218c6c49d55ca55a78abd3e599a85bd016a6d jcaby <jeremycaby@hotmail.com> 1619073666 +0200	commit: Initial commit
+aec218c6c49d55ca55a78abd3e599a85bd016a6d f0db9c85fd624e25b5369c79603048edf51777a5 jeremy.caby <jeremy.caby@student.kuleuven.be> 1619684055 +0200	commit: Initial commit 2
+f0db9c85fd624e25b5369c79603048edf51777a5 af5fca8d2aa9d28fa7e5b27c6bf15e9866e4cd06 jeremy.caby <jeremy.caby@student.kuleuven.be> 1619684444 +0200	commit: Renames and deletes
+af5fca8d2aa9d28fa7e5b27c6bf15e9866e4cd06 642e9a3a89a82cd81289955cad97e95b89e8aa48 jeremy.caby <jeremy.caby@student.kuleuven.be> 1619684558 +0200	commit: deletes
+642e9a3a89a82cd81289955cad97e95b89e8aa48 7c1c978f1548bf6fc462569144b28478821c9bfc jeremy.caby <jeremy.caby@student.kuleuven.be> 1619685171 +0200	commit: clean up code
+7c1c978f1548bf6fc462569144b28478821c9bfc f1349a2c71ea1c31e60519388846433f5250fc13 jeremy.caby <jeremy.caby@student.kuleuven.be> 1619704558 +0200	commit: reorganization
+f1349a2c71ea1c31e60519388846433f5250fc13 11376a4958f030fd7cda701e4be06c57656cf0c9 jeremy.caby <jeremy.caby@student.kuleuven.be> 1619706196 +0200	commit: can->twai
+11376a4958f030fd7cda701e4be06c57656cf0c9 67cc54327f821070a1a0b8207877c6ccacf13a56 jeremy.caby <jeremy.caby@student.kuleuven.be> 1619706274 +0200	commit: can->twai
+67cc54327f821070a1a0b8207877c6ccacf13a56 80158099b95c3900362b962fb70d7d1ab2963b8f jeremy.caby <jeremy.caby@student.kuleuven.be> 1619806423 +0200	commit: Self test adaptation
+80158099b95c3900362b962fb70d7d1ab2963b8f fc63d0c50d5c17d21b571528b397221c89d2128f jeremy.caby <jeremy.caby@student.kuleuven.be> 1619806542 +0200	commit: Self test adaptation
+fc63d0c50d5c17d21b571528b397221c89d2128f f2ded64e596f924a5f92293092d4cba7bf550b89 jeremy.caby <jeremy.caby@student.kuleuven.be> 1619830598 +0200	commit: big commit
+f2ded64e596f924a5f92293092d4cba7bf550b89 91f9c8bb1d3929ce239c45618438452772ae76d1 jeremy.caby <jeremy.caby@student.kuleuven.be> 1619891982 +0200	commit: Self test adaptation
