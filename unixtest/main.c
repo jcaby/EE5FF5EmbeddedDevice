@@ -42,7 +42,7 @@ int main (){
     int value = 0;
     twai_message_t tx_msg;
     for (int i = 0; i < 16; i++) {
-        value = rand()%800;
+        value = 711; //rand()%800;
         printf("Value: %d in binary: %llu \n", value, convert(value));
         tx_msg.data[0] = i;
         printf("data[0] sensor_id: %d in binary: %llu \n",tx_msg.data[0], convert(tx_msg.data[0]));

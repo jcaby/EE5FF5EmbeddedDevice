@@ -2095,15 +2095,9 @@ CMakeFiles/app.dir/clean:
 
 # All Build rule for target.
 CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/esp_pm/CMakeFiles/__idf_esp_pm.dir/all
-CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all
-CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/asio/CMakeFiles/__idf_asio.dir/all
-CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/cbor/CMakeFiles/__idf_cbor.dir/all
-CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/unity/CMakeFiles/__idf_unity.dir/all
-CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/cmock/CMakeFiles/__idf_cmock.dir/all
-CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/coap/CMakeFiles/__idf_coap.dir/all
-CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/console/CMakeFiles/__idf_console.dir/all
-CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/esp_adc_cal/CMakeFiles/__idf_esp_adc_cal.dir/all
-CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/all
+CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all
+CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/protocol_examples_common/CMakeFiles/__idf_protocol_examples_common.dir/all
+CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/main/CMakeFiles/__idf_main.dir/all
 CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir/all
 CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/all
 CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/mdns/CMakeFiles/__idf_mdns.dir/all
@@ -2119,10 +2113,16 @@ CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/libsodium/CMakeFiles/__idf_libsodium.di
 CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/all
 CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/openssl/CMakeFiles/__idf_openssl.dir/all
 CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/all
-CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all
-CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/protocol_examples_common/CMakeFiles/__idf_protocol_examples_common.dir/all
-CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/main/CMakeFiles/__idf_main.dir/all
 CMakeFiles/mqtt_tcp.elf.dir/all: CMakeFiles/_project_elf_src.dir/all
+CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all
+CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/asio/CMakeFiles/__idf_asio.dir/all
+CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/cbor/CMakeFiles/__idf_cbor.dir/all
+CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/unity/CMakeFiles/__idf_unity.dir/all
+CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/cmock/CMakeFiles/__idf_cmock.dir/all
+CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/coap/CMakeFiles/__idf_coap.dir/all
+CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/console/CMakeFiles/__idf_console.dir/all
+CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/esp_adc_cal/CMakeFiles/__idf_esp_adc_cal.dir/all
+CMakeFiles/mqtt_tcp.elf.dir/all: esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mqtt_tcp.elf.dir/build.make CMakeFiles/mqtt_tcp.elf.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mqtt_tcp.elf.dir/build.make CMakeFiles/mqtt_tcp.elf.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jeremy/CLionProjects/tcp/cmake-build-debug/CMakeFiles --progress-num= "Built target mqtt_tcp.elf"
@@ -3611,14 +3611,9 @@ esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/clean:
 
 # All Build rule for target.
 esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/esp_pm/CMakeFiles/__idf_esp_pm.dir/all
-esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/asio/CMakeFiles/__idf_asio.dir/all
-esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/cbor/CMakeFiles/__idf_cbor.dir/all
-esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/unity/CMakeFiles/__idf_unity.dir/all
-esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/cmock/CMakeFiles/__idf_cmock.dir/all
-esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/coap/CMakeFiles/__idf_coap.dir/all
-esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/console/CMakeFiles/__idf_console.dir/all
-esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/esp_adc_cal/CMakeFiles/__idf_esp_adc_cal.dir/all
-esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/all
+esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all
+esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/protocol_examples_common/CMakeFiles/__idf_protocol_examples_common.dir/all
+esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/main/CMakeFiles/__idf_main.dir/all
 esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir/all
 esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/all
 esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/mdns/CMakeFiles/__idf_mdns.dir/all
@@ -3634,9 +3629,14 @@ esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/libsod
 esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/all
 esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/openssl/CMakeFiles/__idf_openssl.dir/all
 esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/all
-esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all
-esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/protocol_examples_common/CMakeFiles/__idf_protocol_examples_common.dir/all
-esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/main/CMakeFiles/__idf_main.dir/all
+esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/asio/CMakeFiles/__idf_asio.dir/all
+esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/cbor/CMakeFiles/__idf_cbor.dir/all
+esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/unity/CMakeFiles/__idf_unity.dir/all
+esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/cmock/CMakeFiles/__idf_cmock.dir/all
+esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/coap/CMakeFiles/__idf_coap.dir/all
+esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/console/CMakeFiles/__idf_console.dir/all
+esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/esp_adc_cal/CMakeFiles/__idf_esp_adc_cal.dir/all
+esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/all: esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/build.make esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/build.make esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jeremy/CLionProjects/tcp/cmake-build-debug/CMakeFiles --progress-num= "Built target __ldgen_output_esp32.project.ld"
@@ -4340,8 +4340,8 @@ esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir/clean:
 
 # All Build rule for target.
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/all: esp-idf/esp_pm/CMakeFiles/__idf_esp_pm.dir/all
-esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/all: esp-idf/console/CMakeFiles/__idf_console.dir/all
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/all: esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir/all
+esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/all: esp-idf/console/CMakeFiles/__idf_console.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jeremy/CLionProjects/tcp/cmake-build-debug/CMakeFiles --progress-num=69 "Built target __idf_protocomm"
@@ -4397,10 +4397,10 @@ esp-idf/mdns/CMakeFiles/__idf_mdns.dir/clean:
 
 # All Build rule for target.
 esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/all: esp-idf/esp_pm/CMakeFiles/__idf_esp_pm.dir/all
-esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/all: esp-idf/console/CMakeFiles/__idf_console.dir/all
 esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/all: esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir/all
 esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/all: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/all
 esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/all: esp-idf/mdns/CMakeFiles/__idf_mdns.dir/all
+esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/all: esp-idf/console/CMakeFiles/__idf_console.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/build.make esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/build.make esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jeremy/CLionProjects/tcp/cmake-build-debug/CMakeFiles --progress-num= "Built target __idf_esp_local_ctrl"
@@ -4862,11 +4862,11 @@ esp-idf/ulp/CMakeFiles/__idf_ulp.dir/clean:
 
 # All Build rule for target.
 esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all: esp-idf/esp_pm/CMakeFiles/__idf_esp_pm.dir/all
-esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all: esp-idf/console/CMakeFiles/__idf_console.dir/all
 esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all: esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir/all
 esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/all
 esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all: esp-idf/mdns/CMakeFiles/__idf_mdns.dir/all
 esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all: esp-idf/json/CMakeFiles/__idf_json.dir/all
+esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all: esp-idf/console/CMakeFiles/__idf_console.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/build.make esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/build.make esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jeremy/CLionProjects/tcp/cmake-build-debug/CMakeFiles --progress-num=79 "Built target __idf_wifi_provisioning"
@@ -4921,14 +4921,8 @@ esp-idf/protocol_examples_common/CMakeFiles/__idf_protocol_examples_common.dir/c
 
 # All Build rule for target.
 esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/esp_pm/CMakeFiles/__idf_esp_pm.dir/all
-esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/asio/CMakeFiles/__idf_asio.dir/all
-esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/cbor/CMakeFiles/__idf_cbor.dir/all
-esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/unity/CMakeFiles/__idf_unity.dir/all
-esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/cmock/CMakeFiles/__idf_cmock.dir/all
-esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/coap/CMakeFiles/__idf_coap.dir/all
-esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/console/CMakeFiles/__idf_console.dir/all
-esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/esp_adc_cal/CMakeFiles/__idf_esp_adc_cal.dir/all
-esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/all
+esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all
+esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/protocol_examples_common/CMakeFiles/__idf_protocol_examples_common.dir/all
 esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir/all
 esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/all
 esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/mdns/CMakeFiles/__idf_mdns.dir/all
@@ -4944,8 +4938,14 @@ esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/libsodium/CMakeFiles/__idf_l
 esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/all
 esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/openssl/CMakeFiles/__idf_openssl.dir/all
 esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/all
-esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all
-esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/protocol_examples_common/CMakeFiles/__idf_protocol_examples_common.dir/all
+esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/asio/CMakeFiles/__idf_asio.dir/all
+esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/cbor/CMakeFiles/__idf_cbor.dir/all
+esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/unity/CMakeFiles/__idf_unity.dir/all
+esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/cmock/CMakeFiles/__idf_cmock.dir/all
+esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/coap/CMakeFiles/__idf_coap.dir/all
+esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/console/CMakeFiles/__idf_console.dir/all
+esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/esp_adc_cal/CMakeFiles/__idf_esp_adc_cal.dir/all
+esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jeremy/CLionProjects/tcp/cmake-build-debug/CMakeFiles --progress-num= "Built target __idf_main"

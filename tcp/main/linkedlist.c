@@ -47,26 +47,34 @@ void insert_at_tail(twai_message_t x){
 //Prints all the elements in linked list in forward traversal order
 void print_list() {
     struct Node* temp = head;
-    printf("Forward: ");
-    while(temp != NULL) {
-        printf("%d %d %d %d \n",temp->package.data[0],temp->package.data[1],temp->package.data[2], ((temp->package.data[1]<<4 & 0xFFF)+(temp->package.data[2]>>4 & 0xFF)));
-        temp = temp->next;
+    printf("\n");
+    printf("Printed package list: \n");
+    if (temp == NULL){
+        printf("\n");
+        printf ("              Empty list!");
+    } else {
+        while (temp != NULL) {
+            printf("||| id: %d | value_H: %d | value_L: %d ||| Calculated actual value: %d \n", head->package.data[0], head->package.data[1], head->package.data[2],
+                   ((head->package.data[1] << 4 & 0xFFF) + (head->package.data[2] >> 4 & 0xFF)));
+                   temp = temp->next;
+        }
     }
+    printf("\n");
     printf("\n");
 }
 
-_Noreturn void publish_list(void *arg){
-
+_Noreturn void publish_list_task(void *arg){
+    uint16_t  actual_value;
     while (1) {
         TIMERG0.wdt_wprotect=TIMG_WDT_WKEY_VALUE;
         TIMERG0.wdt_feed=1;
         TIMERG0.wdt_wprotect=0;
         while (head != NULL) {
             struct Node *temp = head;
-            printf("%d %d %d %d \n", head->package.data[0], head->package.data[1], head->package.data[2],
-                   ((head->package.data[1] << 4 & 0xFFF) + (head->package.data[2] >> 4 & 0xFF)));
-            mqtt_publish((head->package.data[0]),
-                         ((head->package.data[1] << 4 & 0xFFF) + (head->package.data[2] >> 4 & 0xFF)));
+            actual_value = ((head->package.data[1] << 4 & 0xFFF) + (head->package.data[2] >> 4 & 0xFF));
+            printf("||| id: %d | value_H: %d | value_L: %d ||| Calculated actual value: %d \n", head->package.data[0], head->package.data[1], head->package.data[2],
+                   actual_value);
+            mqtt_publish((head->package.data[0]), actual_value);
             head = head->next;
             free(temp);
             if (head != NULL)

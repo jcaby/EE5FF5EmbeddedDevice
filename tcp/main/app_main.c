@@ -66,7 +66,7 @@ static SemaphoreHandle_t done_sem;
 static void twai_transmit_task(void *arg)
 {
     twai_message_t tx_msg = {.data_length_code = 3, .identifier = MSG_ID, .self = 1};
-    int value = 1;
+    int value;
     for (int iter = 0; iter < NO_OF_ITERS; iter++) {
         xSemaphoreTake(tx_sem, portMAX_DELAY);
         for (int i = 0; i < NO_OF_MSGS; i++) {
@@ -159,12 +159,11 @@ void app_main(void)
     rx_sem = xSemaphoreCreateBinary();
     ctrl_sem = xSemaphoreCreateBinary();
     done_sem = xSemaphoreCreateBinary();
-  //  mqtt_sem = xSemaphoreCreateBinary();
 
     xTaskCreatePinnedToCore(twai_control_task, "TWAI_ctrl", 4096, NULL, CTRL_TSK_PRIO, NULL, tskNO_AFFINITY);
     xTaskCreatePinnedToCore(twai_receive_task, "TWAI_rx", 4096, NULL, RX_TASK_PRIO, NULL, tskNO_AFFINITY);
     xTaskCreatePinnedToCore(twai_transmit_task, "TWAI_tx", 4096, NULL, TX_TASK_PRIO, NULL, tskNO_AFFINITY);
-    xTaskCreatePinnedToCore(publish_list, "LIST_pub", 4096, NULL, 7, NULL, tskNO_AFFINITY);
+    xTaskCreatePinnedToCore(publish_list_task, "LIST_pub", 4096, NULL, 7, NULL, tskNO_AFFINITY);
 
     //Install TWAI driver
     ESP_ERROR_CHECK(twai_driver_install(&g_config, &t_config, &f_config));
@@ -181,7 +180,7 @@ void app_main(void)
 
 
 
-    ESP_LOGI(EXAMPLE_TAG, "Finito señor(ita)");
+    ESP_LOGI(EXAMPLE_TAG, "Finito");
 
     //Cleanup
     vSemaphoreDelete(tx_sem);

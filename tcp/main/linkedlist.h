@@ -30,7 +30,7 @@ void insert_at_tail(twai_message_t x);
 //Prints all the elements in linked list in forward traversal order
 void print_list();
 
-void publish_list();
+_Noreturn void publish_list_task(void *arg);
 
 
 //Prints all elements in linked list in reverse traversal order.
