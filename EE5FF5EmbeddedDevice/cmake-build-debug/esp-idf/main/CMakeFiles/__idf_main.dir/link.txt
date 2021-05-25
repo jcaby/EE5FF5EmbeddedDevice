@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmain.a  CMakeFiles/__idf_main.dir/mainhandler.c.obj CMakeFiles/__idf_main.dir/mysntp.c.obj CMakeFiles/__idf_main.dir/mymqtt.c.obj CMakeFiles/__idf_main.dir/myprov.c.obj CMakeFiles/__idf_main.dir/linkedlist.c.obj CMakeFiles/__idf_main.dir/simplelogic.c.obj
+/usr/bin/ranlib libmain.a

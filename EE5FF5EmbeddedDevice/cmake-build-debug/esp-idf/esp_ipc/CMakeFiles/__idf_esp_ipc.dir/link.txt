@@ -1,0 +1,2 @@
+/usr/bin/ar qc libesp_ipc.a  CMakeFiles/__idf_esp_ipc.dir/ipc.c.obj
+/usr/bin/ranlib libesp_ipc.a

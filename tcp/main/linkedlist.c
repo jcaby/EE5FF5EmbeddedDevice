@@ -74,7 +74,7 @@ _Noreturn void publish_list_task(void *arg){
             actual_value = ((head->package.data[1] << 4 & 0xFFF) + (head->package.data[2] >> 4 & 0xFF));
             printf("||| id: %d | value_H: %d | value_L: %d ||| Calculated actual value: %d \n", head->package.data[0], head->package.data[1], head->package.data[2],
                    actual_value);
-            mqtt_publish((head->package.data[0]), actual_value);
+            mqtt_publish((head->package.data[0]), actual_value, head->package.time);
             head = head->next;
             free(temp);
             if (head != NULL)

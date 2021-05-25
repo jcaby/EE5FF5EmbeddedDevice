@@ -1,37 +1,34 @@
+#include <glob.h>
 #include <fnmatch.h>
 #include "mysntp.h"
 #include "mymqtt.h"
 
 #include <stdio.h>
 #include <stdint.h>
-#include <string.h>
 #include <time.h>
-#include <esp_vfs_fat.h>
+#include "driver/gpio.h"
+
 
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
-#include <freertos/event_groups.h>
 
 #include <esp_log.h>
-#include <esp_wifi.h>
 #include <esp_event.h>
 #include "esp_netif.h"
 #include <nvs_flash.h>
 
 #include "esp_system.h"
-#include "esp_spi_flash.h"
 
 #include <protocol_examples_common.h>
 
 #include <stdlib.h>
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
+
 #include "freertos/semphr.h"
 #include "esp_err.h"
 #include "driver/twai.h"
 #include "linkedlist.h"
 
-#include <inttypes.h>
+#include <esp_sleep.h>
 
 static const char *TAG = "MQTT_EXAMPLE";
 
@@ -39,7 +36,7 @@ static const char *TAG = "MQTT_EXAMPLE";
 
 //Example Configurations
 #define NO_OF_MSGS              15
-#define NO_OF_ITERS             3
+#define NO_OF_ITERS             5
 #define TX_GPIO_NUM             25
 #define RX_GPIO_NUM             26
 #define TX_TASK_PRIO            8       //Sending task priority
@@ -47,6 +44,10 @@ static const char *TAG = "MQTT_EXAMPLE";
 #define CTRL_TSK_PRIO           10      //Control task priority
 #define MSG_ID                  0x555   //11 bit standard format ID
 #define EXAMPLE_TAG             "TWAI Self Test"
+
+#define ESP_INTR_FLAG_DEFAULT 0
+#define CONFIG_BUTTON_PIN 33
+
 
 static const twai_timing_config_t t_config = TWAI_TIMING_CONFIG_25KBITS();
 //Filter all other IDs except MSG_ID
@@ -62,18 +63,22 @@ static SemaphoreHandle_t ctrl_sem;
 static SemaphoreHandle_t done_sem;
 //static SemaphoreHandle_t mqtt_sem;
 
+//TaskHandle_t ISR = NULL;
+
 
 static void twai_transmit_task(void *arg)
 {
     twai_message_t tx_msg = {.data_length_code = 3, .identifier = MSG_ID, .self = 1};
     int value;
+    //for (int iter = 0; iter < NO_OF_ITERS; iter++) {
     for (int iter = 0; iter < NO_OF_ITERS; iter++) {
         xSemaphoreTake(tx_sem, portMAX_DELAY);
         for (int i = 0; i < NO_OF_MSGS; i++) {
-            value = rand() % 799;
+
+            value = rand()%800;
             printf("sent value: %d \n", value);
             //Transmit messages using self reception request
-            tx_msg.data[0] = i;
+            tx_msg.data[0] = 32;
             tx_msg.data[1] = value >> 4 & 0xFF;
             tx_msg.data[2] = value << 4 & 0xFF;
             ESP_ERROR_CHECK(twai_transmit(&tx_msg, portMAX_DELAY));
@@ -89,14 +94,15 @@ static void twai_receive_task(void *arg)
     twai_message_t rx_message;
     head = NULL;
 
+    //for (int iter = 0; iter < NO_OF_ITERS; iter++) {
     for (int iter = 0; iter < NO_OF_ITERS; iter++) {
         xSemaphoreTake(rx_sem, portMAX_DELAY);
         for (int i = 0; i < NO_OF_MSGS; i++) {
             //Receive message and print message data
             ESP_ERROR_CHECK(twai_receive(&rx_message, portMAX_DELAY));
             ESP_LOGI(EXAMPLE_TAG, "Msg received");
+            rx_message.time = (unsigned) time(NULL);
             insert_at_tail(rx_message);
-
         }
         //Indicate to control task all messages received for this iteration
         xSemaphoreGive(ctrl_sem);
@@ -107,23 +113,34 @@ static void twai_receive_task(void *arg)
 static void twai_control_task(void *arg)
 {
     xSemaphoreTake(ctrl_sem, portMAX_DELAY);
-    for (int iter = 0; iter < NO_OF_ITERS; iter++) {
-        //Start TWAI Driver for this iteration
-        ESP_ERROR_CHECK(twai_start());
-        ESP_LOGI(EXAMPLE_TAG, "Driver started");
+    ESP_LOGI(EXAMPLE_TAG, "Driver started");
+    ESP_ERROR_CHECK(twai_start());
 
+    //for (int iter = 0; iter < NO_OF_ITERS; iter++) {
+    for (int iter = 0; iter < NO_OF_ITERS; iter++){
+        //Start TWAI Driver for this iteration
         //Trigger TX and RX tasks to start transmitting/receiving
         xSemaphoreGive(rx_sem);
         xSemaphoreGive(tx_sem);
         xSemaphoreTake(ctrl_sem, portMAX_DELAY);    //Wait for TX and RX tasks to finish iteration
 
-        ESP_ERROR_CHECK(twai_stop());               //Stop the TWAI Driver
-        ESP_LOGI(EXAMPLE_TAG, "Driver stopped");
-        vTaskDelay(pdMS_TO_TICKS(10000));             //Delay then start next iteration
+
+        vTaskDelay(pdMS_TO_TICKS(5000));             //Delay then start next iteration
     }
     xSemaphoreGive(done_sem);
+
     vTaskDelete(NULL);
 }
+
+// interrupt service routine, called when the button is pressed
+void IRAM_ATTR button_isr_handler(void* arg) {
+
+    xSemaphoreGive(done_sem);
+}
+
+
+
+
 
 void app_main(void)
 {
@@ -154,6 +171,22 @@ void app_main(void)
     srand((unsigned int)time(NULL));
     mqtt_app_start();
 
+    gpio_pad_select_gpio(CONFIG_BUTTON_PIN);
+
+    // set the correct direction
+    gpio_set_direction(CONFIG_BUTTON_PIN, GPIO_MODE_INPUT);
+
+    // enable interrupt on falling (1->0) edge for button pin
+    gpio_set_intr_type(CONFIG_BUTTON_PIN, GPIO_INTR_NEGEDGE);
+
+
+    //Install the driver’s GPIO ISR handler service, which allows per-pin GPIO interrupt handlers.
+    // install ISR service with default configuration
+    gpio_install_isr_service(ESP_INTR_FLAG_DEFAULT);
+
+    // attach the interrupt service routine
+    gpio_isr_handler_add(CONFIG_BUTTON_PIN, button_isr_handler, NULL);
+
     //Create tasks and synchronization primitives
     tx_sem = xSemaphoreCreateBinary();
     rx_sem = xSemaphoreCreateBinary();
@@ -165,6 +198,7 @@ void app_main(void)
     xTaskCreatePinnedToCore(twai_transmit_task, "TWAI_tx", 4096, NULL, TX_TASK_PRIO, NULL, tskNO_AFFINITY);
     xTaskCreatePinnedToCore(publish_list_task, "LIST_pub", 4096, NULL, 7, NULL, tskNO_AFFINITY);
 
+
     //Install TWAI driver
     ESP_ERROR_CHECK(twai_driver_install(&g_config, &t_config, &f_config));
     ESP_LOGI(EXAMPLE_TAG, "Driver installed");
@@ -173,8 +207,12 @@ void app_main(void)
     xSemaphoreGive(ctrl_sem);
     //Wait for all iterations and tasks to complete running
     xSemaphoreTake(done_sem, portMAX_DELAY);
+    ESP_ERROR_CHECK(twai_stop());               //Stop the TWAI Driver
+    ESP_LOGI(EXAMPLE_TAG, "Driver stopped");
+    ESP_ERROR_CHECK(twai_driver_uninstall());               //Stop the TWAI Driver
+    ESP_LOGI(EXAMPLE_TAG, "Driver uninstalled");
 
-    print_list();
+    //print_list();
     //publish_list();
     //print_list();
 
@@ -187,6 +225,9 @@ void app_main(void)
     vSemaphoreDelete(rx_sem);
     vSemaphoreDelete(ctrl_sem);
     vQueueDelete(done_sem);
+
+    //ESP32 goes to sleep indefinitely (until woken up by external reset for new session)
+    esp_deep_sleep_start();
 
 }
 

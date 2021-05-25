@@ -6,7 +6,7 @@
     "config_defaults":    "",
     "app_elf":            "mqtt_tcp.elf",
     "app_bin":            "mqtt_tcp.bin",
-    "git_revision":       "v4.4-dev-9-gc7aee2d94-dirty",
+    "git_revision":       "v4.4-dev-9-gc7aee2d94e-dirty",
     "target":             "esp32",
     "phy_data_partition": "",
     "monitor_baud" :      "115200",

@@ -21,7 +21,7 @@ void mqtt_app_start(void) {
 
 }
 
-void mqtt_publish(uint8_t sensor_id, uint16_t value) {
+void mqtt_publish(uint8_t sensor_id, uint16_t value, uint32_t timestamp) {
     int msg_id;
 
     char topic[16] = "EE5FF5/measure";
@@ -33,7 +33,8 @@ void mqtt_publish(uint8_t sensor_id, uint16_t value) {
     //Initialize the values
     sprintf(sensor_id_string, "%d", sensor_id);
     sprintf(value_string, "%d",value);
-    sprintf(time_string, "%u", (unsigned) time(NULL));
+    //sprintf(time_string, "%u", (unsigned) time(NULL));
+    sprintf(time_string, "%u", timestamp);
 
     char data[512]; //JSON String
     //Concat the different components of the JSON string

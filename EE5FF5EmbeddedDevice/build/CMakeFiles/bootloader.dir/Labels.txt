@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/Users/jeremy/CLionProjects/EE5FF5EmbeddedDevice/build/CMakeFiles/bootloader
+/Users/jeremy/CLionProjects/EE5FF5EmbeddedDevice/build/CMakeFiles/bootloader.rule
+/Users/jeremy/CLionProjects/EE5FF5EmbeddedDevice/build/CMakeFiles/bootloader-complete.rule
+/Users/jeremy/CLionProjects/EE5FF5EmbeddedDevice/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/Users/jeremy/CLionProjects/EE5FF5EmbeddedDevice/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/Users/jeremy/CLionProjects/EE5FF5EmbeddedDevice/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/Users/jeremy/CLionProjects/EE5FF5EmbeddedDevice/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+/Users/jeremy/CLionProjects/EE5FF5EmbeddedDevice/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/Users/jeremy/CLionProjects/EE5FF5EmbeddedDevice/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/Users/jeremy/CLionProjects/EE5FF5EmbeddedDevice/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule

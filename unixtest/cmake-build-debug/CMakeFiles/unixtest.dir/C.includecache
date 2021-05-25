@@ -7,14 +7,6 @@
 #IncludeRegexTransform: 
 
 /Users/jeremy/CLionProjects/unixtest/main.c
-inttypes.h
--
-math.h
--
 stdio.h
--
-time.h
--
-stdlib.h
 -
 

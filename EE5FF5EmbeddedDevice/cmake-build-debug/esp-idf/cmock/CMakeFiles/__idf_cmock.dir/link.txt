@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcmock.a  CMakeFiles/__idf_cmock.dir/CMock/src/cmock.c.obj
+/usr/bin/ranlib libcmock.a
