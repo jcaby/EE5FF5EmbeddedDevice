@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "/Users/jeremy/CLionProjects/.git/HEAD"
-  "/Users/jeremy/CLionProjects/.git/refs/heads/master"
+  "/Users/jeremy/CLionProjects/.git/logs/refs/heads/master"
   "../CMakeLists.txt"
   "CMakeFiles/3.17.5/CMakeASMCompiler.cmake"
   "CMakeFiles/3.17.5/CMakeCCompiler.cmake"

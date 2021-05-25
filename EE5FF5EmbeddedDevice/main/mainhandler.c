@@ -284,7 +284,7 @@ void app_main(void) {
     xTaskCreatePinnedToCore(twai_receive_task, "TWAI_rx", 4096, NULL, RX_TASK_PRIO, NULL, tskNO_AFFINITY);
     xTaskCreatePinnedToCore(twai_transmit_task, "TWAI_tx", 4096, NULL, TX_TASK_PRIO, NULL, tskNO_AFFINITY);
     xTaskCreatePinnedToCore(twai_control_task, "TWAI_ctrl", 4096, NULL, CTRL_TSK_PRIO, NULL, tskNO_AFFINITY);
-    //xTaskCreatePinnedToCore(publish_list_task, "LIST_pub", 4096, NULL, 7, NULL, tskNO_AFFINITY);
+    xTaskCreatePinnedToCore(publish_list_task, "LIST_pub", 4096, NULL, 7, NULL, tskNO_AFFINITY);
 
 
     //Install TWAI driver
