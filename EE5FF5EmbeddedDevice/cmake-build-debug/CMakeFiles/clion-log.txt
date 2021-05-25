@@ -29,7 +29,7 @@ CMake Warning (dev) at /Users/jeremy/esp/esp-idf/components/mbedtls/CMakeLists.t
   has a relative path.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
--- App "untitled" version: 6d6b778f-dirty
+-- App "untitled" version: 1c6c9279-dirty
 -- Adding linker script /Users/jeremy/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
 -- Adding linker script /Users/jeremy/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
 -- Adding linker script /Users/jeremy/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld

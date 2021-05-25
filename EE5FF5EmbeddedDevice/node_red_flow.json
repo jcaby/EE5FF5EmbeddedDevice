@@ -1,0 +1,122 @@
+[
+    {
+        "id": "377b6570.c1834a",
+        "type": "tab",
+        "label": "ESP32 MQTT to MySQL",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "bffe3cc8.9b653",
+        "type": "mqtt in",
+        "z": "377b6570.c1834a",
+        "name": "",
+        "topic": "EE5FF5/measure",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "5b09e93.8999918",
+        "x": 460,
+        "y": 380,
+        "wires": [
+            [
+                "f99b7b61.577b58",
+                "2c34bc1b.f42844"
+            ]
+        ]
+    },
+    {
+        "id": "24c01575.b4432a",
+        "type": "mysql",
+        "z": "377b6570.c1834a",
+        "mydb": "59964f05.0674a",
+        "name": "db",
+        "x": 930,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f99b7b61.577b58",
+        "type": "function",
+        "z": "377b6570.c1834a",
+        "name": "",
+        "func": "msg.id = msg.payload.sensor_id;\nmsg.value = msg.payload.value;\nmsg.time = msg.payload.time;\nmsg.session = msg.payload.session_id;\nmsg.topic = \"SET @v2 := (SELECT id FROM a20fire5.Sensor WHERE sensor_id = \"+ msg.id +\");SET @v0 := (SELECT container_id from Sensor WHERE id = @v2);SET @v1 := (SELECT max(session_id) FROM Session WHERE container_id = @v0 );INSERT INTO Measurement(sensor_id,value,time,session_id) VALUES (@v2,\" + msg.value + \",FROM_UNIXTIME(\" + msg.time + \"),@v1); \"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 690,
+        "y": 380,
+        "wires": [
+            [
+                "24c01575.b4432a",
+                "817aa6f1.7dc3c8"
+            ]
+        ]
+    },
+    {
+        "id": "817aa6f1.7dc3c8",
+        "type": "debug",
+        "z": "377b6570.c1834a",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "2c34bc1b.f42844",
+        "type": "debug",
+        "z": "377b6570.c1834a",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "5b09e93.8999918",
+        "type": "mqtt-broker",
+        "name": "eclipse",
+        "broker": "mqtt.eclipseprojects.io",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "59964f05.0674a",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "mysql.studev.groept.be",
+        "port": "3306",
+        "db": "a20fire5",
+        "tz": "",
+        "charset": "UTF8"
+    }
+]
